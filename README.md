@@ -10,10 +10,8 @@ forecasting inter-protocol credit exposure on DeFi networks**. It supports:
 
 This repository is the **core runnable release**
 
-Model: [https://huggingface.co/EVIEHub/DeXposure-FM](https://huggingface.co/EVIEHub/DeXposure-FM)
-
-Paper: [http://fengxianghe.github.io/paper/DeXposure-FM.pdf](http://fengxianghe.github.io/paper/DeXposure-FM.pdf)
-
+Paper: [http://fengxianghe.github.io/paper/DeXposure-FM.pdf](http://fengxianghe.github.io/paper/DeXposure-FM.pdf)  
+Model: [https://huggingface.co/EVIEHub/DeXposure-FM](https://huggingface.co/EVIEHub/DeXposure-FM)  
 Developers: [Aijie Shu](https://www.linkedin.com/in/aijie-shu-5420047a/), [Wenbin Wu](https://www.linkedin.com/in/wbwe/), [Gbenga Ibikunle](https://www.business-school.ed.ac.uk/staff/gbenga-ibikunle), [Fengxiang He](http://fengxianghe.github.io)
 
 ---
