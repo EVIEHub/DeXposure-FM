@@ -1,0 +1,67 @@
+{
+  "model_name": "DeXposure-FM",
+  "version": "1.0.0",
+  "description": "Graph-Tabular Foundation Model for DeFi Credit Exposure Forecasting",
+  "architecture": {
+    "backbone": "GraphPFN (LiMiX-16M)",
+    "embedding_dim": 64,
+    "num_layers": 12,
+    "num_heads": 4
+  },
+  "checkpoints": {
+    "dexposure-fm-h1.pt": {
+      "horizon": 1,
+      "type": "finetuned",
+      "metrics": {
+        "auprc": 0.978,
+        "auroc": 0.996
+      },
+      "training_date": "2026-01-28"
+    },
+    "dexposure-fm-h4.pt": {
+      "horizon": 4,
+      "type": "finetuned", 
+      "metrics": {
+        "auprc": 0.973,
+        "auroc": 0.995
+      },
+      "training_date": "2026-01-26"
+    },
+    "dexposure-fm-h8-h12.pt": {
+      "horizons": [8, 12],
+      "type": "finetuned",
+      "metrics": {
+        "h8": {"auprc": 0.967, "auroc": 0.993},
+        "h12": {"auprc": 0.967, "auroc": 0.993}
+      },
+      "training_date": "2026-01-27"
+    },
+    "graphpfn-frozen-all-horizons.pt": {
+      "horizons": [1, 4, 8, 12],
+      "type": "frozen",
+      "metrics": {
+        "h1": {"auprc": 0.938, "auroc": 0.988},
+        "h4": {"auprc": 0.940, "auroc": 0.988},
+        "h8": {"auprc": 0.938, "auroc": 0.987},
+        "h12": {"auprc": 0.936, "auroc": 0.986}
+      },
+      "training_date": "2026-01-26"
+    }
+  },
+  "training": {
+    "dataset": "DeFi Exposure Network",
+    "date_range": "2020-03-23 to 2025-01-01",
+    "train_weeks": 104,
+    "val_weeks": 12,
+    "test_weeks": 8,
+    "optimizer": "AdamW",
+    "epochs": 20,
+    "seed": 42
+  },
+  "tasks": [
+    "link_existence_prediction",
+    "edge_weight_regression", 
+    "node_tvl_change_regression"
+  ],
+  "license": "Apache-2.0"
+}
