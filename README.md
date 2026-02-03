@@ -1,13 +1,18 @@
 # DeXposure-FM
 
-DeXposure-FM is a graph–tabular foundation model built on GraphPFN for **forecasting DeFi credit‑exposure networks**. It supports:
+DeXposure-FM is a time-series, graph foundation model for **measuring and
+forecasting inter-protocol credit exposure on DeFi networks**. It supports:
 
 - **Edge existence prediction** (link prediction)
 - **Edge weight prediction** (exposure size)
 - **Node TVL change prediction**
 - **Macroprudential tools** (SIS / sector spillovers / contagion)
 
-This repository is the **core runnable release** (no paper sources).
+This repository is the **core runnable release**
+
+Paper: [http://fengxianghe.github.io/paper/DeXposure-FM.pdf](http://fengxianghe.github.io/paper/DeXposure-FM.pdf)
+
+Developers: [Aijie Shu](https://www.linkedin.com/in/aijie-shu-5420047a/), [Wenbin Wu](https://www.linkedin.com/in/wbwe/), [Gbenga Ibikunle](https://www.business-school.ed.ac.uk/staff/gbenga-ibikunle), [Fengxiang He](http://fengxianghe.github.io)
 
 ---
 
