@@ -8,11 +8,36 @@ forecasting inter-protocol credit exposure on DeFi networks**. It supports:
 - **Node TVL change prediction**
 - **Macroprudential tools** (SIS / sector spillovers / contagion)
 
-This repository is the **core runnable release**
+This repository is the **core runnable release**.
 
 Paper: [https://arxiv.org/pdf/2602.03981](https://arxiv.org/pdf/2602.03981)
 Model: [https://huggingface.co/EVIEHub/DeXposure-FM](https://huggingface.co/EVIEHub/DeXposure-FM)  
 Developers: [Aijie Shu](https://www.linkedin.com/in/aijie-shu-5420047a/), [Wenbin Wu](https://www.linkedin.com/in/wbwe/), [Gbenga Ibikunle](https://www.business-school.ed.ac.uk/staff/gbenga-ibikunle), [Fengxiang He](http://fengxianghe.github.io)
+
+## arXiv v2 release status
+
+This repository targets **arXiv:2602.03981v2**, revised 30 June 2026.
+
+- The v2 experiment contract uses forecast horizons 1, 4, 8, and 12 weeks,
+  holdout start `2025-01-01`, validation window 24 weeks, 20 epochs, and seed 42.
+- `checkpoints/metrics-v2-paper.json` records the values reported in the v2
+  paper. The older `metrics-h1.json` belongs to a different h=1 run.
+- The hosted checkpoint set is not a complete provenance record for all four
+  original v2 fine-tuned weights. The exact original h=12 checkpoint is absent,
+  and the packaged h=1 checkpoint belongs to an earlier run with different
+  metrics.
+- A clean four-checkpoint reconstruction is being rerun. Until it completes,
+  use the current weights for method inspection and partial verification, not
+  as proof of byte-identical reproduction of every v2 table and figure.
+
+The evidence boundary, input hashes, paper targets, output paths, and acceptance
+checks are in [`docs/V2_REPRODUCIBILITY.md`](docs/V2_REPRODUCIBILITY.md).
+
+Run the fixed v2 Task I and Task II sequence with:
+
+```bash
+bash run_v2_reproduction.sh
+```
 
 ---
 
@@ -40,14 +65,14 @@ Developers: [Aijie Shu](https://www.linkedin.com/in/aijie-shu-5420047a/), [Wenbi
 uv sync
 ```
 
-**2) Dataset (Git LFS or script)**
+**2) Dataset (Hugging Face or script)**
 
 ```
-git lfs install
-git lfs pull
-# or
 uv run python bin/download_dataset.py
 ```
+
+The model repository uses Hugging Face access approval. Accept its conditions
+and run `hf auth login` before downloading the data files.
 
 **3) Minimal CPU‑friendly run**
 
@@ -107,7 +132,8 @@ Key files:
 
 ## Checkpoints
 
-This repository already includes the released weights under `checkpoints/`.
+This repository includes the currently recoverable weights under `checkpoints/`.
+Read `checkpoints/README.md` before using them as v2 evidence.
 
 - Model card: `checkpoints/README.md`
 - Metrics: `checkpoints/metrics-*.json`

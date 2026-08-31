@@ -11,6 +11,7 @@ from pathlib import Path
 import urllib.request
 import hashlib
 import json
+import shutil
 from typing import Dict, Optional
 
 
@@ -18,18 +19,18 @@ from typing import Dict, Optional
 DATASET_FILES = {
     # 主要数据文件
     "historical-network_week_2025-07-01.json": {
-        "url": "https://github.com/losdwind/graph-dexposure/releases/download/v1.0.0/historical-network_week_2025-07-01.json",
-        "md5": None,
+        "url": "hf://data/historical-network_week_2025-07-01.json",
+        "sha256": "d77920a7212847dd3cbfbbaabc8622c25e6523d2e7b2006d79d71b85851e1d0b",
         "size_mb": 76
     },
     "historical-network_week_2020-03-30.json": {
-        "url": "https://github.com/losdwind/graph-dexposure/releases/download/v1.0.0/historical-network_week_2020-03-30.json",
-        "md5": None,
+        "url": "hf://data/historical-network_week_2020-03-30.json",
+        "sha256": "aa330bbb8fbf99719fc85d49625d7df7bd68f2b042f5806ded080cec99bad3f8",
         "size_mb": 1100
     },
     "meta_df.csv": {
-        "url": "https://github.com/losdwind/graph-dexposure/releases/download/v1.0.0/meta_df.csv",
-        "md5": None,
+        "url": "hf://data/meta_df.csv",
+        "sha256": "a8306889fc4473972e843d8e847c9db68776cb86014746f1029fee574e254305",
         "size_mb": 0.1
     },
 
@@ -109,7 +110,16 @@ def download_file(url: str, dest_path: Path, desc: str = "文件") -> bool:
         temp_path = dest_path.with_suffix(dest_path.suffix + '.tmp')
 
         # 下载文件
-        urllib.request.urlretrieve(url, temp_path, reporthook=progress_hook)
+        if url.startswith("hf://"):
+            from huggingface_hub import hf_hub_download
+
+            cached_path = hf_hub_download(
+                repo_id="EVIEHub/DeXposure-FM",
+                filename=url.removeprefix("hf://"),
+            )
+            shutil.copy2(cached_path, temp_path)
+        else:
+            urllib.request.urlretrieve(url, temp_path, reporthook=progress_hook)
         print()  # 换行
 
         # 重命名为最终文件名
@@ -131,7 +141,11 @@ def download_file(url: str, dest_path: Path, desc: str = "文件") -> bool:
         return False
 
 
-def verify_file(file_path: Path, expected_md5: Optional[str] = None) -> bool:
+def verify_file(
+    file_path: Path,
+    expected_md5: Optional[str] = None,
+    expected_sha256: Optional[str] = None,
+) -> bool:
     """
     验证下载的文件
 
@@ -166,6 +180,21 @@ def verify_file(file_path: Path, expected_md5: Optional[str] = None) -> bool:
             print(f"  ✗ MD5 校验失败: 期望 {expected_md5}, 实际 {actual_md5}")
             return False
         print(f"  ✓ MD5 校验通过")
+
+    if expected_sha256:
+        print("  正在计算 SHA-256...")
+        digest = hashlib.sha256()
+        with open(file_path, "rb") as f:
+            for chunk in iter(lambda: f.read(1024 * 1024), b""):
+                digest.update(chunk)
+        actual_sha256 = digest.hexdigest()
+        if actual_sha256 != expected_sha256:
+            print(
+                f"  ✗ SHA-256 校验失败: 期望 {expected_sha256}, "
+                f"实际 {actual_sha256}"
+            )
+            return False
+        print("  ✓ SHA-256 校验通过")
 
     return True
 
@@ -224,7 +253,11 @@ def download_dataset(
         # 下载文件
         if download_file(config['url'], dest_path, filename):
             # 验证文件
-            if verify_file(dest_path, config.get('md5')):
+            if verify_file(
+                dest_path,
+                config.get("md5"),
+                config.get("sha256"),
+            ):
                 success_count += 1
             else:
                 failed_files.append(filename)
