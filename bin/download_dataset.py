@@ -79,6 +79,12 @@ DATASET_FILES = {
     }
 }
 
+V2_REQUIRED_FILES = [
+    "historical-network_week_2020-03-30.json",
+    "historical-network_week_2025-07-01.json",
+    "meta_df.csv",
+]
+
 
 def download_file(url: str, dest_path: Path, desc: str = "文件") -> bool:
     """
@@ -225,7 +231,7 @@ def download_dataset(
     data_path.mkdir(parents=True, exist_ok=True)
 
     # 确定要下载的文件
-    files_to_download = files if files else list(DATASET_FILES.keys())
+    files_to_download = files if files else V2_REQUIRED_FILES
 
     success_count = 0
     failed_files = []
@@ -276,7 +282,7 @@ def download_dataset(
             print(f"  - {f}")
         print(f"\n提示:")
         print(f"  1. 检查网络连接")
-        print(f"  2. 确认 GitHub Releases 是否存在")
+        print(f"  2. 确认已接受 Hugging Face 仓库的访问条件并完成登录")
         print(f"  3. 可以手动下载后放到 {data_path}")
         return False
 
@@ -307,7 +313,7 @@ def main():
 注意:
   - 数据集文件约 1.2GB,请确保网络连接稳定
   - 下载前请确保目标目录有足够空间
-  - 如果 GitHub Releases 不存在,需要手动上传数据集文件
+  - 默认下载 v2 复现所需的三个固定输入，并检查 SHA-256
         """
     )
 

@@ -11,7 +11,7 @@ All commands below assume you are at the repo root and have run:
 uv sync
 ```
 
-If you did not fetch the dataset via Git LFS, download it first:
+Download the fixed v2 inputs from Hugging Face before running the experiments:
 
 ```
 uv run python bin/download_dataset.py
@@ -61,4 +61,3 @@ Available experiments (see `--help` for the full list):
 - `predictive_contagion`
 - `early_warning`
 - `sis_sensitivity` (minimal robustness check)
-
