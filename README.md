@@ -26,9 +26,10 @@ This repository targets **arXiv:2602.03981v2**, revised 30 June 2026.
   original v2 fine-tuned weights. The exact original h=12 checkpoint is absent,
   and the packaged h=1 checkpoint belongs to an earlier run with different
   metrics.
-- A clean four-checkpoint reconstruction is being rerun. Until it completes,
-  use the current weights for method inspection and partial verification, not
-  as proof of byte-identical reproduction of every v2 table and figure.
+- A clean four-checkpoint reconstruction is prepared but has not completed.
+  Until it completes, use the current weights for method inspection and partial
+  verification, not as proof of byte-identical reproduction of every v2 table
+  and figure.
 
 The evidence boundary, input hashes, paper targets, output paths, and acceptance
 checks are in [`docs/V2_REPRODUCIBILITY.md`](docs/V2_REPRODUCIBILITY.md).
