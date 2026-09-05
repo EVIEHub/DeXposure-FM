@@ -1,0 +1,42 @@
+{
+  "artifact_status": "verified_v2_reconstruction",
+  "checkpoint_sha256_by_horizon": {
+    "h1": "6924f0214aa96f33147d106d95de4839c6ea0d87420e7b46a842bf1e5a6e1707",
+    "h12": "54fd57b1c9a77105589bf478950e8a9710ce4ab112dda9dbd86f69bc1031b692",
+    "h4": "d115a5cecb51c9c158ddad25abd55b708b2658cb4cbc8667334bef7a11eab452",
+    "h8": "86b809d250178cbf33a402dabbcc4f7f969b4c8702d88b1374d25fb68aaf3ebe"
+  },
+  "completed_at_utc": "2026-09-05T11:34:03.638184+00:00",
+  "final_tag": "20260905_v2_reconstruction_h1_h4_h8_h12",
+  "forecast_horizons_weeks": [
+    1,
+    4,
+    8,
+    12
+  ],
+  "model": "DeXposure-FM",
+  "paper_table_identity_claimed": false,
+  "run_tag_by_horizon": {
+    "h1": "20260904_v2_vast_api_reconstruction_5_h1_20260904T113217Z_p41433",
+    "h12": "20260905_v2_remaining_h4_h8_h12_a100pcie_host264267_20260905T022753Z",
+    "h4": "20260905_v2_remaining_h4_h8_h12_a100pcie_host264267_20260905T022753Z",
+    "h8": "20260905_v2_remaining_h4_h8_h12_a100pcie_host264267_20260905T022753Z"
+  },
+  "schema_version": 1,
+  "shared_contract": {
+    "core_training_file": "cloud/train_src/run_full_experiment.py",
+    "core_training_file_sha256": "d2e47cb6ce33aff1d8c1ecba0de3494f84c3596ee1cefb45e9e29825b2be4a0e",
+    "epochs": 20,
+    "feature_schema_sha256": "923e71a7f76a65c8a908c0bdc922e79f7d62170db9292bef4c3ea326330e8bc3",
+    "holdout_start": "2025-01-01",
+    "network_snapshots": 283,
+    "seed": 42,
+    "validation_weeks": 24
+  },
+  "source_sha256_by_horizon": {
+    "h1": "3902da94df33a3b2b6bbda8355672e6708c600ec5f4deb7e76a6a4b73a636802",
+    "h12": "2f809aee77c9a937ffb15795b05ffe68b70308f769b6a63839af2f2a5dc83a1a",
+    "h4": "2f809aee77c9a937ffb15795b05ffe68b70308f769b6a63839af2f2a5dc83a1a",
+    "h8": "2f809aee77c9a937ffb15795b05ffe68b70308f769b6a63839af2f2a5dc83a1a"
+  }
+}

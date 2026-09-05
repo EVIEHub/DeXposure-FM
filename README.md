@@ -14,7 +14,29 @@ Paper: [https://arxiv.org/pdf/2602.03981](https://arxiv.org/pdf/2602.03981)
 Model: [https://huggingface.co/EVIEHub/DeXposure-FM](https://huggingface.co/EVIEHub/DeXposure-FM)  
 Developers: [Aijie Shu](https://www.linkedin.com/in/aijie-shu-5420047a/), [Wenbin Wu](https://www.linkedin.com/in/wbwe/), [Gbenga Ibikunle](https://www.business-school.ed.ac.uk/staff/gbenga-ibikunle), [Fengxiang He](http://fengxianghe.github.io)
 
-## arXiv v2 release status
+## Evaluate the latest four-horizon checkpoints
+
+This is a reproduction candidate. See [validation status](reproduction/VALIDATION.md)
+for completed checks and the outstanding independent full evaluation.
+
+The `reconstruction-20260905` release provides separate h1, h4, h8 and h12
+checkpoints, a byte-identical copy of the September training entrypoint, fixed
+data/model revisions, SHA-256 checks, and an evaluation-only command.
+
+After `uv sync --frozen` and Hugging Face authentication if access is requested:
+
+```bash
+uv run python -m reproduction.prepare
+uv run python -m reproduction.evaluate --device cuda
+```
+
+See [the reproduction guide](reproduction/README.md) for installation,
+retraining, prediction CSV export, exact settings and all six metrics at every
+horizon. `evaluation.json` reports differences against both the measured
+September rerun and the paper. The new files are at
+[HF reconstructions/20260905](https://huggingface.co/EVIEHub/DeXposure-FM/tree/035c8cfa240ddf6a4c579e6e597df3427e542482/reconstructions/20260905).
+
+## Historical arXiv v2 artifacts
 
 This repository targets **arXiv:2602.03981v2**, revised 30 June 2026.
 
@@ -22,19 +44,21 @@ This repository targets **arXiv:2602.03981v2**, revised 30 June 2026.
   holdout start `2025-01-01`, validation window 24 weeks, 20 epochs, and seed 42.
 - `checkpoints/metrics-v2-paper.json` records the values reported in the v2
   paper. The older `metrics-h1.json` belongs to a different h=1 run.
-- The hosted checkpoint set is not a complete provenance record for all four
-  original v2 fine-tuned weights. The exact original h=12 checkpoint is absent,
-  and the packaged h=1 checkpoint belongs to an earlier run with different
-  metrics.
-- A clean four-checkpoint reconstruction is prepared but has not completed.
-  Until it completes, use the current weights for method inspection and partial
-  verification, not as proof of byte-identical reproduction of every v2 table
-  and figure.
+- The historical checkpoint set is retained unchanged. Its h1 metrics differ
+  from the paper, and the legacy h8-h12 file contains only one model state.
+  Its exact horizon provenance remains unresolved; see the
+  [historical audit](docs/V2_HISTORICAL_CHECKPOINT_AUDIT.md).
+- The September four-checkpoint training, artifact upload, local download and
+  hash verification are complete. These new Task I results have improvements
+  and decreases relative to the published values. They do not establish
+  reproduction of baseline rows, Task II, or every paper figure.
 
 The evidence boundary, input hashes, paper targets, output paths, and acceptance
 checks are in [`docs/V2_REPRODUCIBILITY.md`](docs/V2_REPRODUCIBILITY.md).
 
-Run the fixed v2 Task I and Task II sequence with:
+The older exploratory Task I/Task II sequence remains available below. It has
+not been validated as a complete paper reproduction. For the latest checkpoint
+evaluation use the reproduction guide above.
 
 ```bash
 bash run_v2_reproduction.sh

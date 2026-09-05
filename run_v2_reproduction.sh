@@ -56,7 +56,7 @@ find "$TASK1_DIR" "$TASK2_DIR" -type f -print0 \
   | sort -z \
   | xargs -0 shasum -a 256 > output/v2-SHA256SUMS
 
-echo "V2 RECONSTRUCTION COMPLETE"
+echo "Experiment sequence finished; compare outputs with the paper before claiming matching results."
 echo "Task I: $TASK1_DIR"
 echo "Task II: $TASK2_DIR"
 echo "Hashes: output/v2-SHA256SUMS"

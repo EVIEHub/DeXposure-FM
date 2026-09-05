@@ -1,0 +1,61 @@
+{
+  "release": "reconstruction-20260905",
+  "files": [
+    {
+      "repo": "stableai-org/LimiX-16M",
+      "revision": "da5f3072bf3633c70d957c02518c30d461007764",
+      "remote_path": "LimiX-16M.ckpt",
+      "local_path": "checkpoints/LimiX-16M.ckpt",
+      "sha256": "ee6d6ae865821ca790a40a0199d09a662f4509da5e4c26535809432e599e7a52"
+    },
+    {
+      "repo": "EVIEHub/DeXposure-FM",
+      "revision": "035c8cfa240ddf6a4c579e6e597df3427e542482",
+      "remote_path": "reconstructions/20260905/checkpoints/dexposure-fm-h1.pt",
+      "local_path": "checkpoints/reconstruction-20260905/dexposure-fm-h1.pt",
+      "sha256": "6924f0214aa96f33147d106d95de4839c6ea0d87420e7b46a842bf1e5a6e1707"
+    },
+    {
+      "repo": "EVIEHub/DeXposure-FM",
+      "revision": "035c8cfa240ddf6a4c579e6e597df3427e542482",
+      "remote_path": "reconstructions/20260905/checkpoints/dexposure-fm-h4.pt",
+      "local_path": "checkpoints/reconstruction-20260905/dexposure-fm-h4.pt",
+      "sha256": "d115a5cecb51c9c158ddad25abd55b708b2658cb4cbc8667334bef7a11eab452"
+    },
+    {
+      "repo": "EVIEHub/DeXposure-FM",
+      "revision": "035c8cfa240ddf6a4c579e6e597df3427e542482",
+      "remote_path": "reconstructions/20260905/checkpoints/dexposure-fm-h8.pt",
+      "local_path": "checkpoints/reconstruction-20260905/dexposure-fm-h8.pt",
+      "sha256": "86b809d250178cbf33a402dabbcc4f7f969b4c8702d88b1374d25fb68aaf3ebe"
+    },
+    {
+      "repo": "EVIEHub/DeXposure-FM",
+      "revision": "035c8cfa240ddf6a4c579e6e597df3427e542482",
+      "remote_path": "reconstructions/20260905/checkpoints/dexposure-fm-h12.pt",
+      "local_path": "checkpoints/reconstruction-20260905/dexposure-fm-h12.pt",
+      "sha256": "54fd57b1c9a77105589bf478950e8a9710ce4ab112dda9dbd86f69bc1031b692"
+    },
+    {
+      "repo": "EVIEHub/DeXposure-FM",
+      "revision": "5a5867805e001d14aa68dea45b797a62dc49ede4",
+      "remote_path": "data/historical-network_week_2020-03-30.json",
+      "local_path": "data/historical-network_week_2020-03-30.json",
+      "sha256": "aa330bbb8fbf99719fc85d49625d7df7bd68f2b042f5806ded080cec99bad3f8"
+    },
+    {
+      "repo": "EVIEHub/DeXposure-FM",
+      "revision": "5a5867805e001d14aa68dea45b797a62dc49ede4",
+      "remote_path": "data/meta_df.csv",
+      "local_path": "data/meta_df.csv",
+      "sha256": "a8306889fc4473972e843d8e847c9db68776cb86014746f1029fee574e254305"
+    },
+    {
+      "repo": "EVIEHub/DeXposure-FM",
+      "revision": "5a5867805e001d14aa68dea45b797a62dc49ede4",
+      "remote_path": "graphpfn-v1.ckpt",
+      "local_path": "checkpoints/graphpfn-v1.ckpt",
+      "sha256": "5543a25b07b4be523490b7ef14adbb6c7a9ea763d93a4ef7a22584c0cee9a76d"
+    }
+  ]
+}

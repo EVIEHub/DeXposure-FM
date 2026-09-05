@@ -30,23 +30,36 @@ Paper: [arXiv:2602.03981v2](https://arxiv.org/abs/2602.03981)
 
 Code: [EVIEHub/DeXposure-FM](https://github.com/EVIEHub/DeXposure-FM)
 
-## Important v2 artifact status
+## Latest four-horizon release
+
+Status: reproduction candidate. An independent full run of the new
+evaluation-only entrypoint has not yet completed. Saved September training-run
+metrics must not be confused with a new acceptance-run result.
+
+New September checkpoints are published separately under
+[reconstructions/20260905](https://huggingface.co/EVIEHub/DeXposure-FM/tree/035c8cfa240ddf6a4c579e6e597df3427e542482/reconstructions/20260905).
+Use the [versioned reproduction guide](../reproduction/README.md) to download,
+verify, evaluate or retrain them. The September metrics are reported separately
+from paper metrics. Historical root weights below remain unchanged.
+
+## Historical v2 artifact status
 
 The v2 manuscript was revised on 30 June 2026.
 `metrics-v2-paper.json` records the manuscript values. The older
 `metrics-h1.json` belongs to a different h=1 run. The hosted checkpoints are not
 a complete archive of all four original v2 fine-tuned weights.
 
-| Hosted file | Proven horizon | v2 evidence status |
+| Hosted file | Documented horizon association | v2 evidence status |
 | --- | ---: | --- |
 | `dexposure-fm-h1.pt` | 1 | Earlier run. Its recorded AUPRC 0.978 and AUROC 0.996 do not equal the v2 h=1 row. |
-| `dexposure-fm-h4.pt` | 4 | Metrics agree with the v2 h=4 row. |
-| `dexposure-fm-h8-h12.pt` | 8 | Legacy filename. Use as h=8 only, not as an exact h=12 checkpoint. |
+| `dexposure-fm-h4.pt` | 4 | Accompanying metrics agree with the v2 h=4 row; this does not establish a verified weight-to-result mapping. |
+| `dexposure-fm-h8-h12.pt` | Unresolved | Contains one model state; the filename does not prove which horizon was saved. |
 | `graphpfn-frozen-all-horizons.pt` | 1, 4, 8, 12 | Frozen baseline checkpoint. |
 
-The exact original h=12 fine-tuned checkpoint is not currently hosted. A new
-four-horizon run must be labelled a **v2 reconstruction** unless an original
-checkpoint hash is recovered.
+The original four-horizon weight-to-result mapping is incomplete. The old
+training script overwrote best_model.pt between horizons. See the historical
+audit for the evidence and remaining ambiguity. The new September release
+uses four explicitly identified files and does not replace the old weights.
 
 ## v2 reported Task I results
 

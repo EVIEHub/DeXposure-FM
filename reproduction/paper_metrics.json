@@ -1,0 +1,6 @@
+{
+  "h1": {"exist":{"auroc":0.995,"auprc":0.972},"weight":{"mae":2.465,"rmse":3.388},"node":{"mae":0.056,"rmse":0.400}},
+  "h4": {"exist":{"auroc":0.995,"auprc":0.973},"weight":{"mae":2.489,"rmse":3.424},"node":{"mae":0.140,"rmse":0.680}},
+  "h8": {"exist":{"auroc":0.994,"auprc":0.967},"weight":{"mae":2.554,"rmse":3.509},"node":{"mae":0.229,"rmse":0.890}},
+  "h12": {"exist":{"auroc":0.993,"auprc":0.967},"weight":{"mae":2.648,"rmse":3.606},"node":{"mae":0.286,"rmse":1.046}}
+}

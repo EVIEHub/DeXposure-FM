@@ -1,5 +1,16 @@
 # DeXposure-FM arXiv v2 reproduction record
 
+Current release: [reconstruction-20260905](../reproduction/README.md).
+The four September checkpoints and Task I metrics have been produced,
+uploaded, downloaded and hash-verified. Use that guide for current commands,
+fixed revisions, configuration and paper-versus-rerun comparisons.
+
+The following document preserves the earlier reconstruction plan. Statements
+below that checkpoints are not yet produced or that an exact h12 file is
+absent are historical planning statements. The legacy h8-h12 file's horizon
+is unresolved, as documented in [the historical audit](V2_HISTORICAL_CHECKPOINT_AUDIT.md).
+The new release does not establish baseline, Task II or all-figure reproduction.
+
 Target paper: arXiv:2602.03981v2, revised 30 June 2026.
 
 ## Evidence status

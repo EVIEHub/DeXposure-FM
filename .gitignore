@@ -1,5 +1,7 @@
 # >>> GITHUB DEFAULT PYTHON .GIGIGNORE
 # Byte-compiled / optimized / DLL files
+data/
+checkpoints/reconstruction-20260905/
 __pycache__/
 *.py[cod]
 *$py.class
