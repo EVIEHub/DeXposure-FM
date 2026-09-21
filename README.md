@@ -14,27 +14,17 @@ Paper: [https://arxiv.org/pdf/2602.03981](https://arxiv.org/pdf/2602.03981)
 Model: [https://huggingface.co/EVIEHub/DeXposure-FM](https://huggingface.co/EVIEHub/DeXposure-FM)  
 Developers: [Aijie Shu](https://www.linkedin.com/in/aijie-shu-5420047a/), [Wenbin Wu](https://www.linkedin.com/in/wbwe/), [Gbenga Ibikunle](https://www.business-school.ed.ac.uk/staff/gbenga-ibikunle), [Fengxiang He](http://fengxianghe.github.io)
 
-## Evaluate the latest four-horizon checkpoints
+## Sequential release, 19 September 2026
 
-This is a reproduction candidate. See [validation status](reproduction/VALIDATION.md)
-for completed checks and the outstanding independent full evaluation.
+The `reproduce-sequential-20260919` branch and `fm-sequential-20260919-v1` tag
+contain four horizon checkpoints, frozen training settings, logs and predictions.
+The [reproduction guide](reproduction/sequential_20260919/README.md) provides a
+CPU command that recomputes Task I metrics and the corrected stress-test results
+and figures. Model artifacts are versioned on
+[Hugging Face](https://huggingface.co/EVIEHub/DeXposure-FM/tree/fm-sequential-20260919-v1/runs/20260919_fm_sequential_h1_h4_h8_h12).
 
-The `reconstruction-20260905` release provides separate h1, h4, h8 and h12
-checkpoints, a byte-identical copy of the September training entrypoint, fixed
-data/model revisions, SHA-256 checks, and an evaluation-only command.
-
-After `uv sync --frozen` and Hugging Face authentication if access is requested:
-
-```bash
-uv run python -m reproduction.prepare
-uv run python -m reproduction.evaluate --device cuda
-```
-
-See [the reproduction guide](reproduction/README.md) for installation,
-retraining, prediction CSV export, exact settings and all six metrics at every
-horizon. `evaluation.json` reports differences against both the measured
-September rerun and the paper. The new files are at
-[HF reconstructions/20260905](https://huggingface.co/EVIEHub/DeXposure-FM/tree/035c8cfa240ddf6a4c579e6e597df3427e542482/reconstructions/20260905).
+The earlier September 5 release remains documented in
+[reproduction/README.md](reproduction/README.md).
 
 ## Historical arXiv v2 artifacts
 

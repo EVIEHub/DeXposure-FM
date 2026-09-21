@@ -1,0 +1,4657 @@
+{
+  "horizons": {
+    "h=1": {
+      "samples": [
+        {
+          "time_t": "2025-01-06",
+          "time_t1": "2025-01-13",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 21.665620705497822,
+                "affected_count": 2,
+                "depth": 1
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 11.270087518099162,
+                "affected_count": 70,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.092232282618227,
+                "affected_count": 40,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 24.785231846623297,
+                "affected_count": 94,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 15.952207890894277,
+                "affected_count": 181,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.42567236099431,
+                "affected_count": 84,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 92,
+              "observed_t": {
+                "total_loss_pct": 6.277781311165322,
+                "affected_count": 120,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.358282583886539,
+                "affected_count": 592,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.085241500591996,
+                "affected_count": 166,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.989247311827957,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 93,
+                "pred_size": 92,
+                "actual_size": 92,
+                "used_size": 92
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-01-13",
+          "time_t1": "2025-01-20",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.07844901425074,
+                "affected_count": 40,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 22.90095281358099,
+                "affected_count": 65,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.089806519196966,
+                "affected_count": 29,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.40981046868676,
+                "affected_count": 84,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 23.123606285910423,
+                "affected_count": 146,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.19884407612524,
+                "affected_count": 67,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 10.078951232470203,
+                "affected_count": 165,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 5.602124762897248,
+                "affected_count": 549,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.197742427836065,
+                "affected_count": 129,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9891304347826086,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 92,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-03-03",
+          "time_t1": "2025-03-10",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 23.231961979370922,
+                "affected_count": 2,
+                "depth": 1
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 10.55589144003688,
+                "affected_count": 79,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 23.598382759777625,
+                "affected_count": 20,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 26.103647427465503,
+                "affected_count": 99,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 17.178334348121304,
+                "affected_count": 121,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 27.427613322489346,
+                "affected_count": 197,
+                "depth": 5
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 6.958534339083862,
+                "affected_count": 122,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.495481501716557,
+                "affected_count": 517,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.145167477213683,
+                "affected_count": 158,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-03-17",
+          "time_t1": "2025-03-24",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.405023610533085,
+                "affected_count": 25,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 25.012101676567514,
+                "affected_count": 32,
+                "depth": 1
+              },
+              "actual_t_h": {
+                "total_loss_pct": 24.333823578043418,
+                "affected_count": 3,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.991352627902522,
+                "affected_count": 61,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 22.805393835965404,
+                "affected_count": 119,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.08260522885553,
+                "affected_count": 147,
+                "depth": 4
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 9.906527126411758,
+                "affected_count": 150,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 5.432260609236361,
+                "affected_count": 546,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 6.23388177829986,
+                "affected_count": 135,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9891304347826086,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 92,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-03-24",
+          "time_t1": "2025-03-31",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.328293899788346,
+                "affected_count": 3,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 13.035505441905624,
+                "affected_count": 69,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 24.070893220381336,
+                "affected_count": 4,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 26.076679465263478,
+                "affected_count": 147,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 15.440705028649838,
+                "affected_count": 186,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.279000562805233,
+                "affected_count": 67,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 6.23246896133843,
+                "affected_count": 135,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.055723960267109,
+                "affected_count": 471,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.295321328640505,
+                "affected_count": 121,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-04-14",
+          "time_t1": "2025-04-21",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.06043689574608,
+                "affected_count": 107,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.228275667272161,
+                "affected_count": 147,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 24.157017229139758,
+                "affected_count": 102,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 24.758071555807625,
+                "affected_count": 114,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 14.238042067911357,
+                "affected_count": 363,
+                "depth": 5
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.490637866575288,
+                "affected_count": 112,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 10.779669905944631,
+                "affected_count": 140,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.062933803939391,
+                "affected_count": 917,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 11.163665881374476,
+                "affected_count": 191,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-04-21",
+          "time_t1": "2025-04-28",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.15699651785286,
+                "affected_count": 102,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 24.95344862553724,
+                "affected_count": 59,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 24.001949572205305,
+                "affected_count": 7,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.490623061418614,
+                "affected_count": 112,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 21.867041131777153,
+                "affected_count": 112,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.307228380669052,
+                "affected_count": 22,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 11.155084355841145,
+                "affected_count": 190,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.157582933976102,
+                "affected_count": 525,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 11.037988689152673,
+                "affected_count": 132,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.989010989010989,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-05-12",
+          "time_t1": "2025-05-19",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 23.022816705418318,
+                "affected_count": 8,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.394105390617591,
+                "affected_count": 89,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 23.222680252967447,
+                "affected_count": 14,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.55405874425491,
+                "affected_count": 105,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 15.822862934338415,
+                "affected_count": 922,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.763103470529053,
+                "affected_count": 29,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 7.153959852032912,
+                "affected_count": 144,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 5.997796245865685,
+                "affected_count": 554,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.405908490899469,
+                "affected_count": 145,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-06-30",
+          "time_t1": "2025-07-07",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.83929093832572,
+                "affected_count": 3,
+                "depth": 1
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 11.085163098177782,
+                "affected_count": 126,
+                "depth": 1
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.559616765923703,
+                "affected_count": 25,
+                "depth": 4
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 26.776869087504448,
+                "affected_count": 80,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 14.632961542877377,
+                "affected_count": 271,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.00637617092701,
+                "affected_count": 45,
+                "depth": 4
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 8.04860449729026,
+                "affected_count": 130,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 7.181636744850691,
+                "affected_count": 950,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 11.813007744379602,
+                "affected_count": 149,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-07-07",
+          "time_t1": "2025-07-14",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.557217038026515,
+                "affected_count": 25,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 11.914203148053089,
+                "affected_count": 129,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.986147935894067,
+                "affected_count": 33,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 26.003608371774767,
+                "affected_count": 45,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 13.80374755058915,
+                "affected_count": 255,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.502284251137667,
+                "affected_count": 56,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 11.811749473604063,
+                "affected_count": 149,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.5344543977325165,
+                "affected_count": 681,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 8.231149395170709,
+                "affected_count": 148,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        }
+      ],
+      "Top Protocol Shock_accuracy": {
+        "mae_loss_pct": 8.264466218877994,
+        "correlation": 0.23606393574270926,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 0.2293086471229941
+      },
+      "Top Protocol Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 8.264466218877994,
+        "mae_baseline_all": 0.2293086471229941,
+        "delta_mae_all": -8.035157571754999,
+        "win_rate_all": 0.0,
+        "mae_model_worst": 10.947044776180022,
+        "mae_baseline_worst": 0.42777123749397816,
+        "delta_mae_worst": -10.519273538686043,
+        "win_rate_worst": 0.0,
+        "delta_corr_all": -0.34681634981659615,
+        "delta_sign_acc_all": 0.3,
+        "delta_sign_acc_worst": 0.0,
+        "avg_abs_delta_actual_all": 0.2293086471229941,
+        "avg_abs_delta_actual_worst": 0.42777123749397816
+      },
+      "Top 5 Protocols Shock_accuracy": {
+        "mae_loss_pct": 8.361846307407303,
+        "correlation": -0.2185396744385724,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 0.5458478819099334
+      },
+      "Top 5 Protocols Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 8.361846307407303,
+        "mae_baseline_all": 0.5458478819099334,
+        "delta_mae_all": -7.815998425497369,
+        "win_rate_all": 0.0,
+        "mae_model_worst": 10.04378725426172,
+        "mae_baseline_worst": 1.0608223987410437,
+        "delta_mae_worst": -8.982964855520676,
+        "win_rate_worst": 0.0,
+        "delta_corr_all": -0.08849900377429253,
+        "delta_sign_acc_all": 0.4,
+        "delta_sign_acc_worst": 0.5,
+        "avg_abs_delta_actual_all": 0.5458478819099334,
+        "avg_abs_delta_actual_worst": 1.0608223987410437
+      },
+      "Bridge Sector Shock_accuracy": {
+        "mae_loss_pct": 3.7730797169190837,
+        "correlation": 0.5124595300582503,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 2.59464258448439
+      },
+      "Bridge Sector Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 3.7730797169190837,
+        "mae_baseline_all": 2.59464258448439,
+        "delta_mae_all": -1.1784371324346936,
+        "win_rate_all": 0.3,
+        "mae_model_worst": 3.9832781425394264,
+        "mae_baseline_worst": 3.9351562783643743,
+        "delta_mae_worst": -0.04812186417505204,
+        "win_rate_worst": 0.5,
+        "delta_corr_all": 0.8867325556479738,
+        "delta_sign_acc_all": 0.4,
+        "delta_sign_acc_worst": 0.5,
+        "avg_abs_delta_actual_all": 2.59464258448439,
+        "avg_abs_delta_actual_worst": 3.9351562783643743
+      },
+      "advantage_overall": {
+        "n_samples": 30,
+        "worst_frac": 0.2,
+        "worst_k": 6,
+        "mae_model_all": 6.79979741440146,
+        "mae_baseline_all": 1.123266371172439,
+        "delta_mae_all": -5.676531043229021,
+        "win_rate_all": 0.1,
+        "mae_model_worst": 3.2507259493572067,
+        "mae_baseline_worst": 3.689984978204984,
+        "delta_mae_worst": 0.43925902884777734,
+        "win_rate_worst": 0.5,
+        "delta_corr_all": 0.3338437613087885,
+        "delta_sign_acc_all": 0.36666666666666664,
+        "delta_sign_acc_worst": 0.5,
+        "avg_abs_delta_actual_all": 1.123266371172439,
+        "avg_abs_delta_actual_worst": 3.689984978204984
+      },
+      "Top Protocol Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 1.0,
+        "jaccard_pred_vs_actual_mean": 1.0,
+        "jaccard_used_vs_actual_mean": 1.0,
+        "exact_match_obs_eq_actual_rate": 1.0,
+        "exact_match_pred_eq_actual_rate": 1.0,
+        "exact_match_used_eq_actual_rate": 1.0,
+        "avg_set_size": {
+          "obs": 1.0,
+          "pred": 1.0,
+          "actual": 1.0,
+          "used": 1.0
+        }
+      },
+      "Top 5 Protocols Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 1.0,
+        "jaccard_pred_vs_actual_mean": 0.9333333333333332,
+        "jaccard_used_vs_actual_mean": 0.9333333333333332,
+        "exact_match_obs_eq_actual_rate": 1.0,
+        "exact_match_pred_eq_actual_rate": 0.8,
+        "exact_match_used_eq_actual_rate": 0.8,
+        "avg_set_size": {
+          "obs": 5.0,
+          "pred": 5.0,
+          "actual": 5.0,
+          "used": 5.0
+        }
+      },
+      "Bridge Sector Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 0.9956519170404163,
+        "jaccard_pred_vs_actual_mean": 1.0,
+        "jaccard_used_vs_actual_mean": 1.0,
+        "exact_match_obs_eq_actual_rate": 0.6,
+        "exact_match_pred_eq_actual_rate": 1.0,
+        "exact_match_used_eq_actual_rate": 1.0,
+        "avg_set_size": {
+          "obs": 91.1,
+          "pred": 90.7,
+          "actual": 90.7,
+          "used": 90.7
+        }
+      }
+    },
+    "h=4": {
+      "samples": [
+        {
+          "time_t": "2025-01-13",
+          "time_t1": "2025-02-10",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.07844901425074,
+                "affected_count": 40,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 15.551621199946181,
+                "affected_count": 96,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.683594055910998,
+                "affected_count": 50,
+                "depth": 4
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.40981046868676,
+                "affected_count": 84,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 17.755956500504507,
+                "affected_count": 112,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.430584758236538,
+                "affected_count": 91,
+                "depth": 4
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 10.078834592089828,
+                "affected_count": 165,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 5.579598072351385,
+                "affected_count": 240,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.632688739498114,
+                "affected_count": 155,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9891304347826086,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 92,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-01-27",
+          "time_t1": "2025-02-24",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 21.51343289262905,
+                "affected_count": 10,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 10.999705543924616,
+                "affected_count": 10,
+                "depth": 1
+              },
+              "actual_t_h": {
+                "total_loss_pct": 23.52126679305244,
+                "affected_count": 57,
+                "depth": 4
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.204980561111995,
+                "affected_count": 120,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 16.786321302052556,
+                "affected_count": 77,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.40464038158832,
+                "affected_count": 154,
+                "depth": 4
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 6.924332220483769,
+                "affected_count": 138,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.596024807541992,
+                "affected_count": 160,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 6.04675404330159,
+                "affected_count": 111,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9891304347826086,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 92,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-02-03",
+          "time_t1": "2025-03-03",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 21.42648333808922,
+                "affected_count": 22,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 11.881170418380238,
+                "affected_count": 8,
+                "depth": 1
+              },
+              "actual_t_h": {
+                "total_loss_pct": 23.50255291651592,
+                "affected_count": 2,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.93353100847432,
+                "affected_count": 169,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 16.685177175043442,
+                "affected_count": 35,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.407705612275638,
+                "affected_count": 99,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 7.473970696849944,
+                "affected_count": 132,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.818447325619283,
+                "affected_count": 151,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 7.0395824613872975,
+                "affected_count": 122,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-02-17",
+          "time_t1": "2025-03-17",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.82764056136761,
+                "affected_count": 32,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 11.609085360861881,
+                "affected_count": 54,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 24.5318179580723,
+                "affected_count": 25,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 26.148700296173114,
+                "affected_count": 77,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 14.930371443342512,
+                "affected_count": 81,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.12630340414029,
+                "affected_count": 60,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 9.976855374178584,
+                "affected_count": 145,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.399892392419764,
+                "affected_count": 329,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 9.966609861374927,
+                "affected_count": 150,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9891304347826086,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 92,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-03-17",
+          "time_t1": "2025-04-14",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.405023610533085,
+                "affected_count": 25,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.988505524828307,
+                "affected_count": 68,
+                "depth": 5
+              },
+              "actual_t_h": {
+                "total_loss_pct": 24.242786962406154,
+                "affected_count": 107,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.991352627902522,
+                "affected_count": 61,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 17.886605811770124,
+                "affected_count": 134,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.159052121126333,
+                "affected_count": 161,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 0.6666666666666666,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 9.906527126411758,
+                "affected_count": 150,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 5.895012205727332,
+                "affected_count": 269,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.856940494583231,
+                "affected_count": 140,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9891304347826086,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 92,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-04-07",
+          "time_t1": "2025-05-05",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.059598176190985,
+                "affected_count": 23,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 13.20077769745171,
+                "affected_count": 71,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 23.522178834606667,
+                "affected_count": 35,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.801152296701577,
+                "affected_count": 61,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 15.187670933105386,
+                "affected_count": 110,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.440303628662512,
+                "affected_count": 49,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 0.6666666666666666,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 10.604109967937394,
+                "affected_count": 163,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.136259363775497,
+                "affected_count": 302,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 11.214204747056803,
+                "affected_count": 168,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.989010989010989,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-04-28",
+          "time_t1": "2025-05-26",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.000045876220415,
+                "affected_count": 7,
+                "depth": 1
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 23.198552131037214,
+                "affected_count": 10,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.975235901106984,
+                "affected_count": 6,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.31684844126332,
+                "affected_count": 26,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 23.536518772019377,
+                "affected_count": 32,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.046531971670746,
+                "affected_count": 22,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 0.6666666666666666,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 11.037121074440062,
+                "affected_count": 132,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.658393865275397,
+                "affected_count": 182,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 6.380965301564494,
+                "affected_count": 126,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-05-19",
+          "time_t1": "2025-06-16",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 23.21278899688845,
+                "affected_count": 14,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.368052841650794,
+                "affected_count": 5,
+                "depth": 1
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.270374264197425,
+                "affected_count": 2,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.752124264213368,
+                "affected_count": 29,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 16.28281856960555,
+                "affected_count": 20,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.47936187828725,
+                "affected_count": 72,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 89,
+              "observed_t": {
+                "total_loss_pct": 10.401489217399687,
+                "affected_count": 144,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.820680690433265,
+                "affected_count": 229,
+                "depth": 5
+              },
+              "actual_t_h": {
+                "total_loss_pct": 6.895522284243806,
+                "affected_count": 112,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9888888888888889,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 89,
+                "actual_size": 89,
+                "used_size": 89
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-06-30",
+          "time_t1": "2025-07-28",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.83929093832572,
+                "affected_count": 3,
+                "depth": 1
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 11.211252712130266,
+                "affected_count": 6,
+                "depth": 1
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.817379371858863,
+                "affected_count": 6,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 26.776869087504448,
+                "affected_count": 80,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 14.592181053055695,
+                "affected_count": 25,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 27.21930051891929,
+                "affected_count": 145,
+                "depth": 4
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 8.04860449729026,
+                "affected_count": 130,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.851178470607141,
+                "affected_count": 185,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 6.909725679294188,
+                "affected_count": 113,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-07-14",
+          "time_t1": "2025-08-11",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.956826692906958,
+                "affected_count": 33,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.512482434661452,
+                "affected_count": 37,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.27148571983484,
+                "affected_count": 55,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 26.468476300726085,
+                "affected_count": 56,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 17.049519701615214,
+                "affected_count": 66,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 27.07150954744531,
+                "affected_count": 85,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 8.220646717552516,
+                "affected_count": 148,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.3262716314358025,
+                "affected_count": 232,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 7.0947245582461544,
+                "affected_count": 119,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        }
+      ],
+      "Top Protocol Shock_accuracy": {
+        "mae_loss_pct": 9.72640993725504,
+        "correlation": -0.19293424389013095,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 0.9767359154269719
+      },
+      "Top Protocol Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 9.72640993725504,
+        "mae_baseline_all": 0.9767359154269719,
+        "delta_mae_all": -8.749674021828069,
+        "win_rate_all": 0.1,
+        "mae_model_worst": 12.071471873631754,
+        "mae_baseline_worst": 2.041951739425045,
+        "delta_mae_worst": -10.02952013420671,
+        "win_rate_worst": 0.0,
+        "delta_corr_all": -0.25880182501416593,
+        "delta_sign_acc_all": 0.6,
+        "delta_sign_acc_worst": 0.0,
+        "avg_abs_delta_actual_all": 0.9767359154269719,
+        "avg_abs_delta_actual_worst": 2.041951739425045
+      },
+      "Top 5 Protocols Shock_accuracy": {
+        "mae_loss_pct": 8.909215256023787,
+        "correlation": -0.5239979891525277,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 0.4498698314328259
+      },
+      "Top 5 Protocols Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 8.909215256023787,
+        "mae_baseline_all": 0.4498698314328259,
+        "delta_mae_all": -8.45934542459096,
+        "win_rate_all": 0.0,
+        "mae_model_worst": 8.445382694445986,
+        "mae_baseline_worst": 1.0159801636262564,
+        "delta_mae_worst": -7.429402530819729,
+        "win_rate_worst": 0.0,
+        "delta_corr_all": -0.21142363948308218,
+        "delta_sign_acc_all": 0.5,
+        "delta_sign_acc_worst": 0.5,
+        "avg_abs_delta_actual_all": 0.4498698314328259,
+        "avg_abs_delta_actual_worst": 1.0159801636262564
+      },
+      "Bridge Sector Shock_accuracy": {
+        "mae_loss_pct": 2.0609358001266354,
+        "correlation": -0.8159957189256766,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 1.3863497903481536
+      },
+      "Bridge Sector Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 2.0609358001266354,
+        "mae_baseline_all": 1.3863497903481536,
+        "delta_mae_all": -0.6745860097784817,
+        "win_rate_all": 0.6,
+        "mae_model_worst": 0.17613507876072232,
+        "mae_baseline_worst": 4.081061353015725,
+        "delta_mae_worst": 3.904926274255003,
+        "win_rate_worst": 1.0,
+        "delta_corr_all": 0.017310500263243912,
+        "delta_sign_acc_all": 0.7,
+        "delta_sign_acc_worst": 1.0,
+        "avg_abs_delta_actual_all": 1.3863497903481536,
+        "avg_abs_delta_actual_worst": 4.081061353015725
+      },
+      "advantage_overall": {
+        "n_samples": 30,
+        "worst_frac": 0.2,
+        "worst_k": 6,
+        "mae_model_all": 6.898853664468486,
+        "mae_baseline_all": 0.9376518457359836,
+        "delta_mae_all": -5.961201818732503,
+        "win_rate_all": 0.23333333333333334,
+        "mae_model_worst": 7.839377596921854,
+        "mae_baseline_worst": 2.524977233677092,
+        "delta_mae_worst": -5.314400363244761,
+        "win_rate_worst": 0.3333333333333333,
+        "delta_corr_all": -0.3829098719918813,
+        "delta_sign_acc_all": 0.6,
+        "delta_sign_acc_worst": 0.3333333333333333,
+        "avg_abs_delta_actual_all": 0.9376518457359836,
+        "avg_abs_delta_actual_worst": 2.524977233677092
+      },
+      "Top Protocol Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 1.0,
+        "jaccard_pred_vs_actual_mean": 1.0,
+        "jaccard_used_vs_actual_mean": 1.0,
+        "exact_match_obs_eq_actual_rate": 1.0,
+        "exact_match_pred_eq_actual_rate": 1.0,
+        "exact_match_used_eq_actual_rate": 1.0,
+        "avg_set_size": {
+          "obs": 1.0,
+          "pred": 1.0,
+          "actual": 1.0,
+          "used": 1.0
+        }
+      },
+      "Top 5 Protocols Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 0.9,
+        "jaccard_pred_vs_actual_mean": 0.9333333333333332,
+        "jaccard_used_vs_actual_mean": 0.9333333333333332,
+        "exact_match_obs_eq_actual_rate": 0.7,
+        "exact_match_pred_eq_actual_rate": 0.8,
+        "exact_match_used_eq_actual_rate": 0.8,
+        "avg_set_size": {
+          "obs": 5.0,
+          "pred": 5.0,
+          "actual": 5.0,
+          "used": 5.0
+        }
+      },
+      "Bridge Sector Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 0.9934421617030313,
+        "jaccard_pred_vs_actual_mean": 1.0,
+        "jaccard_used_vs_actual_mean": 1.0,
+        "exact_match_obs_eq_actual_rate": 0.4,
+        "exact_match_pred_eq_actual_rate": 1.0,
+        "exact_match_used_eq_actual_rate": 1.0,
+        "avg_set_size": {
+          "obs": 91.0,
+          "pred": 90.4,
+          "actual": 90.4,
+          "used": 90.4
+        }
+      }
+    },
+    "h=8": {
+      "samples": [
+        {
+          "time_t": "2025-02-10",
+          "time_t1": "2025-04-07",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.44683494325306,
+                "affected_count": 49,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 14.632179546322448,
+                "affected_count": 254,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 24.56903498780822,
+                "affected_count": 23,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.129400508603243,
+                "affected_count": 92,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 17.280211989590917,
+                "affected_count": 351,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.61993464280725,
+                "affected_count": 82,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 10.521716356757434,
+                "affected_count": 154,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.314871942901489,
+                "affected_count": 423,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.83755931649944,
+                "affected_count": 161,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9782608695652174,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 92,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-03-24",
+          "time_t1": "2025-05-19",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.328293899788346,
+                "affected_count": 3,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.57063503067345,
+                "affected_count": 20,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 23.38202163312125,
+                "affected_count": 14,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 26.076679465263478,
+                "affected_count": 147,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 17.079795822425247,
+                "affected_count": 99,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.939874828497167,
+                "affected_count": 29,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 6.2227780679566065,
+                "affected_count": 134,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.110801690516821,
+                "affected_count": 250,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.477312919510327,
+                "affected_count": 145,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.989010989010989,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-03-31",
+          "time_t1": "2025-05-26",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 23.954585122577946,
+                "affected_count": 4,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.533059319117955,
+                "affected_count": 22,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.99357133498292,
+                "affected_count": 6,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.15684547035767,
+                "affected_count": 67,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 15.560925124584413,
+                "affected_count": 52,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.504242985816,
+                "affected_count": 75,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 10.236687954476938,
+                "affected_count": 120,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.529864878913378,
+                "affected_count": 220,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 6.386059055300979,
+                "affected_count": 126,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.989010989010989,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-04-07",
+          "time_t1": "2025-06-02",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.059598176190985,
+                "affected_count": 23,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 16.071390892379114,
+                "affected_count": 46,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.592964305549476,
+                "affected_count": 13,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.853817913546997,
+                "affected_count": 64,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 18.231567287128566,
+                "affected_count": 80,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 24.93454360426121,
+                "affected_count": 32,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 10.604109967937394,
+                "affected_count": 163,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 5.784063225619422,
+                "affected_count": 245,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.236742802451204,
+                "affected_count": 138,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.989010989010989,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-04-21",
+          "time_t1": "2025-06-16",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.15699651785286,
+                "affected_count": 102,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 13.270082138852347,
+                "affected_count": 10,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.27438700196647,
+                "affected_count": 2,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.52736886657516,
+                "affected_count": 116,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 13.71195229700365,
+                "affected_count": 31,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 24.928779561590254,
+                "affected_count": 8,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 0.6666666666666666,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 89,
+              "observed_t": {
+                "total_loss_pct": 11.155073768044405,
+                "affected_count": 189,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.593240269821331,
+                "affected_count": 292,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 6.896760907056274,
+                "affected_count": 112,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.978021978021978,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 89,
+                "actual_size": 89,
+                "used_size": 89
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-04-28",
+          "time_t1": "2025-06-23",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.000045876220415,
+                "affected_count": 7,
+                "depth": 1
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.010970740558745,
+                "affected_count": 49,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.905463492829767,
+                "affected_count": 29,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.31684844126332,
+                "affected_count": 26,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 15.238858902142955,
+                "affected_count": 105,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.31067214969075,
+                "affected_count": 43,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 0.6666666666666666,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 89,
+              "observed_t": {
+                "total_loss_pct": 11.037110276253337,
+                "affected_count": 131,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.440508871316619,
+                "affected_count": 333,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.402644600745587,
+                "affected_count": 140,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9888888888888889,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 89,
+                "actual_size": 89,
+                "used_size": 89
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-05-05",
+          "time_t1": "2025-06-30",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 23.521117559157574,
+                "affected_count": 35,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 16.68933710657811,
+                "affected_count": 26,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.96020966265515,
+                "affected_count": 3,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.43915858837751,
+                "affected_count": 49,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 17.903445876090117,
+                "affected_count": 89,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.28622410030371,
+                "affected_count": 60,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 0.6666666666666666,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 89,
+              "observed_t": {
+                "total_loss_pct": 11.213699846092691,
+                "affected_count": 167,
+                "depth": 1
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.702021675082719,
+                "affected_count": 232,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 7.077532367583901,
+                "affected_count": 129,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9888888888888889,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 89,
+                "actual_size": 89,
+                "used_size": 89
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-05-19",
+          "time_t1": "2025-07-14",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 23.21278899688845,
+                "affected_count": 14,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.822511564499225,
+                "affected_count": 52,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 23.09209918218582,
+                "affected_count": 33,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.752124264213368,
+                "affected_count": 29,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 15.597337125792718,
+                "affected_count": 269,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.624443136309925,
+                "affected_count": 56,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 89,
+              "observed_t": {
+                "total_loss_pct": 10.401489217399687,
+                "affected_count": 144,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.0837488403394016,
+                "affected_count": 372,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 7.260721984020501,
+                "affected_count": 147,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9888888888888889,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 89,
+                "actual_size": 89,
+                "used_size": 89
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-06-09",
+          "time_t1": "2025-08-04",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 21.311813630647876,
+                "affected_count": 8,
+                "depth": 1
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.203844233289637,
+                "affected_count": 83,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.615215795060127,
+                "affected_count": 36,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 24.90718552290349,
+                "affected_count": 41,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 13.332618793492564,
+                "affected_count": 107,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.906901153933028,
+                "affected_count": 57,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 6.965385492402707,
+                "affected_count": 147,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.539928043761267,
+                "affected_count": 328,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 9.758500287479396,
+                "affected_count": 153,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.989010989010989,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-06-23",
+          "time_t1": "2025-08-18",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.77880656551486,
+                "affected_count": 29,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.436482684111333,
+                "affected_count": 15,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.245860627829575,
+                "affected_count": 3,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.435426162600216,
+                "affected_count": 42,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 18.91633298108759,
+                "affected_count": 37,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 27.011339831032814,
+                "affected_count": 93,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 89,
+              "observed_t": {
+                "total_loss_pct": 10.827357042972945,
+                "affected_count": 132,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.232541898182867,
+                "affected_count": 170,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 5.705688570472974,
+                "affected_count": 98,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9888888888888889,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 89,
+                "actual_size": 89,
+                "used_size": 89
+              }
+            }
+          }
+        }
+      ],
+      "Top Protocol Shock_accuracy": {
+        "mae_loss_pct": 9.439033476760644,
+        "correlation": 0.1789698605863029,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 1.0991257682038416
+      },
+      "Top Protocol Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 9.439033476760644,
+        "mae_baseline_all": 1.0991257682038416,
+        "delta_mae_all": -8.339907708556803,
+        "win_rate_all": 0.0,
+        "mae_model_worst": 9.470580152299949,
+        "mae_baseline_worst": 2.0024047802207754,
+        "delta_mae_worst": -7.468175372079173,
+        "win_rate_worst": 0.0,
+        "delta_corr_all": 0.43481440368756263,
+        "delta_sign_acc_all": 0.8,
+        "delta_sign_acc_worst": 0.5,
+        "avg_abs_delta_actual_all": 1.0991257682038416,
+        "avg_abs_delta_actual_worst": 2.0024047802207754
+      },
+      "Top 5 Protocols Shock_accuracy": {
+        "mae_loss_pct": 9.821390979490335,
+        "correlation": 0.12061012254954118,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 0.9793789875756804
+      },
+      "Top 5 Protocols Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 9.821390979490335,
+        "mae_baseline_all": 0.9793789875756804,
+        "delta_mae_all": -8.842011991914655,
+        "win_rate_all": 0.0,
+        "mae_model_worst": 10.834644605192844,
+        "mae_baseline_worst": 1.787814649731068,
+        "delta_mae_worst": -9.046829955461776,
+        "win_rate_worst": 0.0,
+        "delta_corr_all": 0.09074203994689849,
+        "delta_sign_acc_all": 0.4,
+        "delta_sign_acc_worst": 0.0,
+        "avg_abs_delta_actual_all": 0.9793789875756804,
+        "avg_abs_delta_actual_worst": 1.787814649731068
+      },
+      "Bridge Sector Shock_accuracy": {
+        "mae_loss_pct": 2.3049249777309853,
+        "correlation": -0.3414697747670655,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 2.8872870391918397
+      },
+      "Bridge Sector Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 2.3049249777309853,
+        "mae_baseline_all": 2.8872870391918397,
+        "delta_mae_all": 0.5823620614608545,
+        "win_rate_all": 0.5,
+        "mae_model_worst": 0.4151869824724179,
+        "mae_baseline_worst": 4.689990666744051,
+        "delta_mae_worst": 4.2748036842716335,
+        "win_rate_worst": 1.0,
+        "delta_corr_all": 0.7884782620810079,
+        "delta_sign_acc_all": 0.7,
+        "delta_sign_acc_worst": 1.0,
+        "avg_abs_delta_actual_all": 2.8872870391918397,
+        "avg_abs_delta_actual_worst": 4.689990666744051
+      },
+      "advantage_overall": {
+        "n_samples": 30,
+        "worst_frac": 0.2,
+        "worst_k": 6,
+        "mae_model_all": 7.188449811327322,
+        "mae_baseline_all": 1.6552639316571203,
+        "delta_mae_all": -5.533185879670202,
+        "win_rate_all": 0.16666666666666666,
+        "mae_model_worst": 1.1488624756221704,
+        "mae_baseline_worst": 4.12701329935096,
+        "delta_mae_worst": 2.9781508237287895,
+        "win_rate_worst": 0.8333333333333334,
+        "delta_corr_all": -0.029665035177703265,
+        "delta_sign_acc_all": 0.6333333333333333,
+        "delta_sign_acc_worst": 0.8333333333333334,
+        "avg_abs_delta_actual_all": 1.6552639316571203,
+        "avg_abs_delta_actual_worst": 4.12701329935096
+      },
+      "Top Protocol Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 1.0,
+        "jaccard_pred_vs_actual_mean": 1.0,
+        "jaccard_used_vs_actual_mean": 1.0,
+        "exact_match_obs_eq_actual_rate": 1.0,
+        "exact_match_pred_eq_actual_rate": 1.0,
+        "exact_match_used_eq_actual_rate": 1.0,
+        "avg_set_size": {
+          "obs": 1.0,
+          "pred": 1.0,
+          "actual": 1.0,
+          "used": 1.0
+        }
+      },
+      "Top 5 Protocols Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 0.9,
+        "jaccard_pred_vs_actual_mean": 0.8666666666666666,
+        "jaccard_used_vs_actual_mean": 0.8666666666666666,
+        "exact_match_obs_eq_actual_rate": 0.7,
+        "exact_match_pred_eq_actual_rate": 0.6,
+        "exact_match_used_eq_actual_rate": 0.6,
+        "avg_set_size": {
+          "obs": 5.0,
+          "pred": 5.0,
+          "actual": 5.0,
+          "used": 5.0
+        }
+      },
+      "Bridge Sector Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 0.9867882359186707,
+        "jaccard_pred_vs_actual_mean": 1.0,
+        "jaccard_used_vs_actual_mean": 1.0,
+        "exact_match_obs_eq_actual_rate": 0.0,
+        "exact_match_pred_eq_actual_rate": 1.0,
+        "exact_match_used_eq_actual_rate": 1.0,
+        "avg_set_size": {
+          "obs": 90.7,
+          "pred": 89.5,
+          "actual": 89.5,
+          "used": 89.5
+        }
+      }
+    },
+    "h=12": {
+      "samples": [
+        {
+          "time_t": "2025-01-13",
+          "time_t1": "2025-04-07",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.07844901425074,
+                "affected_count": 40,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 18.77998589049897,
+                "affected_count": 115,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 24.99107700851597,
+                "affected_count": 24,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.40981046868676,
+                "affected_count": 84,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 21.947205128857206,
+                "affected_count": 96,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 27.06302530764821,
+                "affected_count": 81,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 10.078951232470203,
+                "affected_count": 165,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 10.02929454238577,
+                "affected_count": 233,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 11.024161922045186,
+                "affected_count": 162,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9891304347826086,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 92,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-01-20",
+          "time_t1": "2025-04-14",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.07921666812574,
+                "affected_count": 29,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 16.47454555499916,
+                "affected_count": 93,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.016020334215547,
+                "affected_count": 107,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.1867793105802,
+                "affected_count": 67,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 19.921402316218376,
+                "affected_count": 94,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.961454490052322,
+                "affected_count": 159,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 0.6666666666666666,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 10.192866004359013,
+                "affected_count": 129,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 10.563314161705671,
+                "affected_count": 211,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 11.207817550942744,
+                "affected_count": 140,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-01-27",
+          "time_t1": "2025-04-21",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 21.51343289262905,
+                "affected_count": 10,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 11.692716502633763,
+                "affected_count": 38,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.028061724839844,
+                "affected_count": 102,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.204980561111995,
+                "affected_count": 120,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 17.06206164225194,
+                "affected_count": 387,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.363025785615566,
+                "affected_count": 115,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 0.6666666666666666,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 6.916362325636229,
+                "affected_count": 138,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.244060545533494,
+                "affected_count": 326,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 11.566209365933283,
+                "affected_count": 191,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9891304347826086,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 92,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-02-03",
+          "time_t1": "2025-04-28",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 21.42648333808922,
+                "affected_count": 22,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.350913799753668,
+                "affected_count": 24,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 24.72139631399979,
+                "affected_count": 7,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.93353100847432,
+                "affected_count": 169,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 17.198650006644613,
+                "affected_count": 101,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.099191314964692,
+                "affected_count": 36,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 0.6666666666666666,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 89,
+              "observed_t": {
+                "total_loss_pct": 7.447376723479463,
+                "affected_count": 130,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 8.11876640643494,
+                "affected_count": 235,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 11.36849600131206,
+                "affected_count": 131,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.978021978021978,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 89,
+                "actual_size": 89,
+                "used_size": 89
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-02-24",
+          "time_t1": "2025-05-19",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 23.137769924858727,
+                "affected_count": 57,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 24.134843262976098,
+                "affected_count": 68,
+                "depth": 6
+              },
+              "actual_t_h": {
+                "total_loss_pct": 23.551090526126735,
+                "affected_count": 13,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.97411616605703,
+                "affected_count": 154,
+                "depth": 4
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 25.055539009258624,
+                "affected_count": 193,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.12742537606466,
+                "affected_count": 28,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 89,
+              "observed_t": {
+                "total_loss_pct": 5.9311091073090445,
+                "affected_count": 109,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.495923037633695,
+                "affected_count": 277,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 10.552909742705785,
+                "affected_count": 144,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.978021978021978,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 89,
+                "actual_size": 89,
+                "used_size": 89
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-03-03",
+          "time_t1": "2025-05-26",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 23.231961979370922,
+                "affected_count": 2,
+                "depth": 1
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.240423829412105,
+                "affected_count": 20,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 23.28875609192447,
+                "affected_count": 6,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 26.103647427465503,
+                "affected_count": 99,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 15.997254801905868,
+                "affected_count": 53,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.84541548364672,
+                "affected_count": 74,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 89,
+              "observed_t": {
+                "total_loss_pct": 6.9415228874668164,
+                "affected_count": 120,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 9.02903382210509,
+                "affected_count": 196,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 6.464844754324972,
+                "affected_count": 126,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.978021978021978,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 89,
+                "actual_size": 89,
+                "used_size": 89
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-03-17",
+          "time_t1": "2025-06-09",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.405023610533085,
+                "affected_count": 25,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 14.377992420346569,
+                "affected_count": 78,
+                "depth": 6
+              },
+              "actual_t_h": {
+                "total_loss_pct": 21.52284031523841,
+                "affected_count": 8,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.991352627902522,
+                "affected_count": 61,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 20.149851836329127,
+                "affected_count": 105,
+                "depth": 5
+              },
+              "actual_t_h": {
+                "total_loss_pct": 25.15447860684383,
+                "affected_count": 41,
+                "depth": 4
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 91,
+              "observed_t": {
+                "total_loss_pct": 9.905480015538561,
+                "affected_count": 150,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 8.741636954793414,
+                "affected_count": 216,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 7.041265417071056,
+                "affected_count": 148,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9891304347826086,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 92,
+                "pred_size": 91,
+                "actual_size": 91,
+                "used_size": 91
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-04-21",
+          "time_t1": "2025-07-14",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 24.15699651785286,
+                "affected_count": 102,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 26.22368795287292,
+                "affected_count": 157,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 23.096410931222653,
+                "affected_count": 33,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.52736886657516,
+                "affected_count": 116,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 27.066548832752005,
+                "affected_count": 181,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 26.121355607714555,
+                "affected_count": 57,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 0.6666666666666666,
+                "jaccard_pred_vs_actual": 0.6666666666666666,
+                "jaccard_used_vs_actual": 0.6666666666666666,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": false,
+                "match_used_eq_actual": false,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 89,
+              "observed_t": {
+                "total_loss_pct": 11.155073768044405,
+                "affected_count": 189,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 7.023144057679852,
+                "affected_count": 248,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 7.26207540571958,
+                "affected_count": 147,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.978021978021978,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 91,
+                "pred_size": 89,
+                "actual_size": 89,
+                "used_size": 89
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-05-19",
+          "time_t1": "2025-08-11",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 23.21278899688845,
+                "affected_count": 14,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 12.913592393161794,
+                "affected_count": 31,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.402351357167888,
+                "affected_count": 55,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 25.752124264213368,
+                "affected_count": 29,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 17.311545069072064,
+                "affected_count": 159,
+                "depth": 4
+              },
+              "actual_t_h": {
+                "total_loss_pct": 27.230586049559953,
+                "affected_count": 85,
+                "depth": 3
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 90,
+              "observed_t": {
+                "total_loss_pct": 10.401505914407105,
+                "affected_count": 145,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.54618115787837,
+                "affected_count": 213,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 6.098964355379332,
+                "affected_count": 119,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 90,
+                "actual_size": 90,
+                "used_size": 90
+              }
+            }
+          }
+        },
+        {
+          "time_t": "2025-05-26",
+          "time_t1": "2025-08-18",
+          "scenarios": {
+            "Top Protocol Shock": {
+              "shocked_nodes_count": 1,
+              "observed_t": {
+                "total_loss_pct": 22.971805977549202,
+                "affected_count": 6,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 14.777056721739301,
+                "affected_count": 7,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 22.36467632574351,
+                "affected_count": 3,
+                "depth": 1
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 1,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 1,
+                "pred_size": 1,
+                "actual_size": 1,
+                "used_size": 1
+              }
+            },
+            "Top 5 Protocols Shock": {
+              "shocked_nodes_count": 5,
+              "observed_t": {
+                "total_loss_pct": 26.479144033035606,
+                "affected_count": 75,
+                "depth": 3
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 18.918035811976523,
+                "affected_count": 40,
+                "depth": 2
+              },
+              "actual_t_h": {
+                "total_loss_pct": 27.161088703169806,
+                "affected_count": 94,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "top_n",
+                "top_n": 5,
+                "jaccard_obs_vs_actual": 1.0,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": true,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 5,
+                "pred_size": 5,
+                "actual_size": 5,
+                "used_size": 5
+              }
+            },
+            "Bridge Sector Shock": {
+              "shocked_nodes_count": 89,
+              "observed_t": {
+                "total_loss_pct": 6.336013834064817,
+                "affected_count": 122,
+                "depth": 2
+              },
+              "predicted_t_h": {
+                "total_loss_pct": 6.131360146993609,
+                "affected_count": 156,
+                "depth": 3
+              },
+              "actual_t_h": {
+                "total_loss_pct": 5.21167260918267,
+                "affected_count": 98,
+                "depth": 2
+              },
+              "shock_set_diagnostics": {
+                "shock_set_type": "sector",
+                "sector": "Bridge",
+                "jaccard_obs_vs_actual": 0.9888888888888889,
+                "jaccard_pred_vs_actual": 1.0,
+                "jaccard_used_vs_actual": 1.0,
+                "match_obs_eq_actual": false,
+                "match_pred_eq_actual": true,
+                "match_used_eq_actual": true,
+                "obs_size": 90,
+                "pred_size": 89,
+                "actual_size": 89,
+                "used_size": 89
+              }
+            }
+          }
+        }
+      ],
+      "Top Protocol Shock_accuracy": {
+        "mae_loss_pct": 7.943898211759972,
+        "correlation": -0.025236353481417704,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 1.8489424355749093
+      },
+      "Top Protocol Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 7.943898211759972,
+        "mae_baseline_all": 1.8489424355749093,
+        "delta_mae_all": -6.094955776185063,
+        "win_rate_all": 0.0,
+        "mae_model_worst": 12.852913868226102,
+        "mae_baseline_worst": 3.4047709040606815,
+        "delta_mae_worst": -9.44814296416542,
+        "win_rate_worst": 0.0,
+        "delta_corr_all": -0.00781608205908907,
+        "delta_sign_acc_all": 0.4,
+        "delta_sign_acc_worst": 0.0,
+        "avg_abs_delta_actual_all": 1.8489424355749093,
+        "avg_abs_delta_actual_worst": 3.4047709040606815
+      },
+      "Top 5 Protocols Shock_accuracy": {
+        "mae_loss_pct": 6.538933872008887,
+        "correlation": -0.28221772200842515,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 0.8237940033295235
+      },
+      "Top 5 Protocols Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 6.538933872008887,
+        "mae_baseline_all": 0.8237940033295235,
+        "delta_mae_all": -5.715139868679364,
+        "win_rate_all": 0.0,
+        "mae_model_worst": 7.517430579639447,
+        "mae_baseline_worst": 1.5658383121540176,
+        "delta_mae_worst": -5.951592267485429,
+        "win_rate_worst": 0.0,
+        "delta_corr_all": -0.11445356316575983,
+        "delta_sign_acc_all": 0.2,
+        "delta_sign_acc_worst": 0.0,
+        "avg_abs_delta_actual_all": 0.8237940033295235,
+        "avg_abs_delta_actual_worst": 1.5658383121540176
+      },
+      "Bridge Sector Shock_accuracy": {
+        "mae_loss_pct": 2.013863218309767,
+        "correlation": 0.3152459105267194,
+        "n_samples": 10,
+        "baseline_mae_loss_pct": 2.78137030675292
+      },
+      "Bridge Sector Shock_advantage": {
+        "n_samples": 10,
+        "worst_frac": 0.2,
+        "worst_k": 2,
+        "mae_model_all": 2.013863218309767,
+        "mae_baseline_all": 2.78137030675292,
+        "delta_mae_all": 0.767507088443153,
+        "win_rate_all": 0.7,
+        "mae_model_worst": 4.689567762735939,
+        "mae_baseline_worst": 4.635823837846896,
+        "delta_mae_worst": -0.05374392488904256,
+        "win_rate_worst": 0.5,
+        "delta_corr_all": 0.6543357201882941,
+        "delta_sign_acc_all": 0.7,
+        "delta_sign_acc_worst": 0.5,
+        "avg_abs_delta_actual_all": 2.78137030675292,
+        "avg_abs_delta_actual_worst": 4.635823837846896
+      },
+      "advantage_overall": {
+        "n_samples": 30,
+        "worst_frac": 0.2,
+        "worst_k": 6,
+        "mae_model_all": 5.49889843402621,
+        "mae_baseline_all": 1.818035581885784,
+        "delta_mae_all": -3.680862852140426,
+        "win_rate_all": 0.23333333333333334,
+        "mae_model_worst": 4.4417264155156415,
+        "mae_baseline_worst": 4.150489284514963,
+        "delta_mae_worst": -0.2912371310006785,
+        "win_rate_worst": 0.6666666666666666,
+        "delta_corr_all": 0.06224249613231544,
+        "delta_sign_acc_all": 0.43333333333333335,
+        "delta_sign_acc_worst": 0.6666666666666666,
+        "avg_abs_delta_actual_all": 1.818035581885784,
+        "avg_abs_delta_actual_worst": 4.150489284514963
+      },
+      "Top Protocol Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 1.0,
+        "jaccard_pred_vs_actual_mean": 1.0,
+        "jaccard_used_vs_actual_mean": 1.0,
+        "exact_match_obs_eq_actual_rate": 1.0,
+        "exact_match_pred_eq_actual_rate": 1.0,
+        "exact_match_used_eq_actual_rate": 1.0,
+        "avg_set_size": {
+          "obs": 1.0,
+          "pred": 1.0,
+          "actual": 1.0,
+          "used": 1.0
+        }
+      },
+      "Top 5 Protocols Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 0.8666666666666666,
+        "jaccard_pred_vs_actual_mean": 0.8666666666666666,
+        "jaccard_used_vs_actual_mean": 0.8666666666666666,
+        "exact_match_obs_eq_actual_rate": 0.6,
+        "exact_match_pred_eq_actual_rate": 0.6,
+        "exact_match_used_eq_actual_rate": 0.6,
+        "avg_set_size": {
+          "obs": 5.0,
+          "pred": 5.0,
+          "actual": 5.0,
+          "used": 5.0
+        }
+      },
+      "Bridge Sector Shock_shockset": {
+        "n_samples": 10,
+        "jaccard_obs_vs_actual_mean": 0.9868368105324625,
+        "jaccard_pred_vs_actual_mean": 1.0,
+        "jaccard_used_vs_actual_mean": 1.0,
+        "exact_match_obs_eq_actual_rate": 0.2,
+        "exact_match_pred_eq_actual_rate": 1.0,
+        "exact_match_used_eq_actual_rate": 1.0,
+        "avg_set_size": {
+          "obs": 91.1,
+          "pred": 89.9,
+          "actual": 89.9,
+          "used": 89.9
+        }
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "name": "Top Protocol Shock",
+      "top_n": 1,
+      "shock_ratio": 0.5
+    },
+    {
+      "name": "Top 5 Protocols Shock",
+      "top_n": 5,
+      "shock_ratio": 0.3
+    },
+    {
+      "name": "Bridge Sector Shock",
+      "sector": "Bridge",
+      "shock_ratio": 1.0
+    }
+  ]
+}

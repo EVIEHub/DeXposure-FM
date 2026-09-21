@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "mode": "saved_prediction_replay",
+  "horizons": [
+    1,
+    4,
+    8,
+    12
+  ],
+  "task1_metric_tolerance": 1e-06,
+  "task2_metric_tolerance": 1e-09,
+  "n_origins": 107,
+  "n_scenarios": 321,
+  "release": {
+    "version": "fm-sequential-20260919-v1",
+    "github_repo": "EVIEHub/DeXposure-FM",
+    "github_branch": "reproduce-sequential-20260919",
+    "hf_repo": "EVIEHub/DeXposure-FM",
+    "hf_revision": "fm-sequential-20260919-v1",
+    "run": "20260919_fm_sequential_h1_h4_h8_h12"
+  }
+}

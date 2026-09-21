@@ -1,0 +1,16 @@
+{
+  "paper_image_shape": [
+    520,
+    436,
+    3
+  ],
+  "new_image_shape": [
+    520,
+    435,
+    3
+  ],
+  "pixel_identical": false,
+  "sampled_cells": 225,
+  "cell_rgb_equal": 225,
+  "max_channel_difference": 0
+}

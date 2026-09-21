@@ -1,0 +1,109 @@
+SELF_CHECK passed: masks, edge log conversion, isolated shock
+INPUT_HASHES passed
+DATA loaded 39 snapshots
+2026-09-21 12:14:56 | INFO     | 
+======================================================================
+2026-09-21 12:14:56 | INFO     | EXPERIMENT 2: Predictive Contagion Simulation
+2026-09-21 12:14:56 | INFO     | ======================================================================
+2026-09-21 12:14:56 | INFO     | Goal: Show model enables forward-looking stress testing
+2026-09-21 12:14:56 | INFO     | 
+--- Horizon h=1 weeks ---
+PAIRS cross-checked 1 32
+2026-09-21 12:15:04 | INFO     |   Top Protocol Shock: MAE=8.26%, Corr=0.236
+2026-09-21 12:15:04 | INFO     |   Top 5 Protocols Shock: MAE=8.36%, Corr=-0.219
+2026-09-21 12:15:04 | INFO     |   Bridge Sector Shock: MAE=3.77%, Corr=0.512
+2026-09-21 12:15:04 | INFO     | 
+--- Horizon h=4 weeks ---
+PAIRS cross-checked 4 29
+2026-09-21 12:15:13 | INFO     |   Top Protocol Shock: MAE=9.73%, Corr=-0.193
+2026-09-21 12:15:13 | INFO     |   Top 5 Protocols Shock: MAE=8.91%, Corr=-0.524
+2026-09-21 12:15:13 | INFO     |   Bridge Sector Shock: MAE=2.06%, Corr=-0.816
+2026-09-21 12:15:13 | INFO     | 
+--- Horizon h=8 weeks ---
+PAIRS cross-checked 8 25
+2026-09-21 12:15:21 | INFO     |   Top Protocol Shock: MAE=9.44%, Corr=0.179
+2026-09-21 12:15:21 | INFO     |   Top 5 Protocols Shock: MAE=9.82%, Corr=0.121
+2026-09-21 12:15:21 | INFO     |   Bridge Sector Shock: MAE=2.30%, Corr=-0.341
+2026-09-21 12:15:21 | INFO     | 
+--- Horizon h=12 weeks ---
+PAIRS cross-checked 12 21
+2026-09-21 12:15:28 | INFO     |   Top Protocol Shock: MAE=7.94%, Corr=-0.025
+2026-09-21 12:15:28 | INFO     |   Top 5 Protocols Shock: MAE=6.54%, Corr=-0.282
+2026-09-21 12:15:28 | INFO     |   Bridge Sector Shock: MAE=2.01%, Corr=0.315
+2026-09-21 12:15:28 | INFO     | 
+Results saved to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_validation_20260921/legacy_default10/exp2_predictive_contagion.json
+2026-09-21 12:15:28 | INFO     | 
+======================================================================
+2026-09-21 12:15:28 | INFO     | EXPERIMENT 2: Predictive Contagion Simulation
+2026-09-21 12:15:28 | INFO     | ======================================================================
+2026-09-21 12:15:28 | INFO     | Goal: Show model enables forward-looking stress testing
+2026-09-21 12:15:28 | INFO     | 
+--- Horizon h=1 weeks ---
+PAIRS cross-checked 1 32
+2026-09-21 12:15:48 | INFO     |   Top Protocol Shock: MAE=7.46%, Corr=0.067
+2026-09-21 12:15:48 | INFO     |   Top 5 Protocols Shock: MAE=7.48%, Corr=0.101
+2026-09-21 12:15:48 | INFO     |   Bridge Sector Shock: MAE=2.75%, Corr=0.215
+2026-09-21 12:15:48 | INFO     | 
+--- Horizon h=4 weeks ---
+PAIRS cross-checked 4 29
+2026-09-21 12:16:08 | INFO     |   Top Protocol Shock: MAE=9.26%, Corr=-0.155
+2026-09-21 12:16:08 | INFO     |   Top 5 Protocols Shock: MAE=9.06%, Corr=-0.167
+2026-09-21 12:16:08 | INFO     |   Bridge Sector Shock: MAE=2.55%, Corr=-0.482
+2026-09-21 12:16:08 | INFO     | 
+--- Horizon h=8 weeks ---
+PAIRS cross-checked 8 25
+2026-09-21 12:16:25 | INFO     |   Top Protocol Shock: MAE=9.06%, Corr=-0.077
+2026-09-21 12:16:25 | INFO     |   Top 5 Protocols Shock: MAE=8.96%, Corr=0.042
+2026-09-21 12:16:25 | INFO     |   Bridge Sector Shock: MAE=2.68%, Corr=-0.318
+2026-09-21 12:16:25 | INFO     | 
+--- Horizon h=12 weeks ---
+PAIRS cross-checked 12 21
+2026-09-21 12:16:39 | INFO     |   Top Protocol Shock: MAE=7.23%, Corr=0.106
+2026-09-21 12:16:39 | INFO     |   Top 5 Protocols Shock: MAE=6.62%, Corr=-0.004
+2026-09-21 12:16:39 | INFO     |   Bridge Sector Shock: MAE=1.70%, Corr=0.428
+2026-09-21 12:16:39 | INFO     | 
+Results saved to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_validation_20260921/paper_common_nodes_all/exp2_predictive_contagion.json
+2026-09-21 12:16:39 | INFO     | 
+======================================================================
+2026-09-21 12:16:39 | INFO     | EXPERIMENT 1: Forward-looking Risk Metric Prediction
+2026-09-21 12:16:39 | INFO     | ======================================================================
+2026-09-21 12:16:39 | INFO     | Goal: Show model can predict future network risk metrics
+2026-09-21 12:16:39 | INFO     | 
+--- Horizon h=1 weeks ---
+PAIRS cross-checked 1 32
+2026-09-21 12:16:58 | INFO     | 
+  Risk Metric Prediction Accuracy (h=1):
+2026-09-21 12:16:58 | INFO     |   Metric               MAE          Corr         Rel.Err     
+2026-09-21 12:16:58 | INFO     |   --------------------------------------------------------
+2026-09-21 12:16:58 | INFO     |   tvl_hhi              0.0031       0.583        4.49%       
+2026-09-21 12:16:58 | INFO     |   edge_hhi             0.3346       0.115        2261.33%    
+2026-09-21 12:16:58 | INFO     |   density              0.0001       0.986        16.35%      
+2026-09-21 12:16:58 | INFO     |   mean_sis             0.0220       0.956        7.69%       
+2026-09-21 12:16:58 | INFO     | 
+--- Horizon h=4 weeks ---
+Traceback (most recent call last):
+  File "/Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_validation_20260921/verify_downstream.py", line 132, in <module>
+    r=json.loads((dest/"exp2_predictive_contagion.json").read_text()) if (dest/"exp2_predictive_contagion.json").exists() else TASK.run_predictive_contagion(config,models,[],META,horizons=list(models),max_samples_per_horizon=n,output_dir=dest)
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/losdwind/CodeProjects2026/graph-dexposure/archive/code/run_task2_model_based.py", line 1751, in run_forward_risk_prediction
+    test_pairs = build_week_pairs(test_snapshots, config.neg_ratio, config.seed, horizon=horizon)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_validation_20260921/verify_downstream.py", line 97, in pairs
+    return d
+             
+  File "/Users/losdwind/.cache/uv/archive-v0/p9FShua3tE2SicDq/lib/python3.12/site-packages/numpy/lib/npyio.py", line 256, in __getitem__
+    return format.read_array(bytes,
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/losdwind/.cache/uv/archive-v0/p9FShua3tE2SicDq/lib/python3.12/site-packages/numpy/lib/format.py", line 831, in read_array
+    data = _read_bytes(fp, read_size, "array data")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/losdwind/.cache/uv/archive-v0/p9FShua3tE2SicDq/lib/python3.12/site-packages/numpy/lib/format.py", line 966, in _read_bytes
+    r = fp.read(size - len(data))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/losdwind/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/zipfile/__init__.py", line 992, in read
+    data = self._read1(n)
+           ^^^^^^^^^^^^^^
+  File "/Users/losdwind/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/zipfile/__init__.py", line 1068, in _read1
+    data = self._decompressor.decompress(data, n)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

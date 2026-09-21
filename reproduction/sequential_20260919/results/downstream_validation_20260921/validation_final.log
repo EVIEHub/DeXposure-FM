@@ -1,0 +1,60 @@
+SELF_CHECK passed: masks, edge log conversion, isolated shock
+INPUT_HASHES passed
+DATA loaded 39 snapshots
+2026-09-21 12:17:20 | INFO     | 
+======================================================================
+2026-09-21 12:17:20 | INFO     | EXPERIMENT 1: Forward-looking Risk Metric Prediction
+2026-09-21 12:17:20 | INFO     | ======================================================================
+2026-09-21 12:17:20 | INFO     | Goal: Show model can predict future network risk metrics
+2026-09-21 12:17:20 | INFO     | 
+--- Horizon h=1 weeks ---
+PAIRS cross-checked 1 32
+2026-09-21 12:17:39 | INFO     | 
+  Risk Metric Prediction Accuracy (h=1):
+2026-09-21 12:17:39 | INFO     |   Metric               MAE          Corr         Rel.Err     
+2026-09-21 12:17:39 | INFO     |   --------------------------------------------------------
+2026-09-21 12:17:39 | INFO     |   tvl_hhi              0.0031       0.583        4.49%       
+2026-09-21 12:17:39 | INFO     |   edge_hhi             0.3346       0.115        2261.33%    
+2026-09-21 12:17:39 | INFO     |   density              0.0001       0.986        16.35%      
+2026-09-21 12:17:39 | INFO     |   mean_sis             0.0220       0.956        7.69%       
+2026-09-21 12:17:39 | INFO     | 
+--- Horizon h=4 weeks ---
+PAIRS cross-checked 4 29
+2026-09-21 12:17:56 | INFO     | 
+  Risk Metric Prediction Accuracy (h=4):
+2026-09-21 12:17:56 | INFO     |   Metric               MAE          Corr         Rel.Err     
+2026-09-21 12:17:56 | INFO     |   --------------------------------------------------------
+2026-09-21 12:17:56 | INFO     |   tvl_hhi              0.0049       0.205        6.97%       
+2026-09-21 12:17:56 | INFO     |   edge_hhi             0.3630       -0.197       2365.64%    
+2026-09-21 12:17:56 | INFO     |   density              0.0001       0.975        16.83%      
+2026-09-21 12:17:56 | INFO     |   mean_sis             0.0224       0.969        7.78%       
+2026-09-21 12:17:56 | INFO     | 
+--- Horizon h=8 weeks ---
+PAIRS cross-checked 8 25
+2026-09-21 12:18:10 | INFO     | 
+  Risk Metric Prediction Accuracy (h=8):
+2026-09-21 12:18:10 | INFO     |   Metric               MAE          Corr         Rel.Err     
+2026-09-21 12:18:10 | INFO     |   --------------------------------------------------------
+2026-09-21 12:18:10 | INFO     |   tvl_hhi              0.0061       -0.717       8.50%       
+2026-09-21 12:18:10 | INFO     |   edge_hhi             0.3623       -0.032       2307.13%    
+2026-09-21 12:18:10 | INFO     |   density              0.0001       0.927        17.74%      
+2026-09-21 12:18:10 | INFO     |   mean_sis             0.0172       0.962        5.96%       
+2026-09-21 12:18:10 | INFO     | 
+--- Horizon h=12 weeks ---
+PAIRS cross-checked 12 21
+2026-09-21 12:18:21 | INFO     | 
+  Risk Metric Prediction Accuracy (h=12):
+2026-09-21 12:18:21 | INFO     |   Metric               MAE          Corr         Rel.Err     
+2026-09-21 12:18:21 | INFO     |   --------------------------------------------------------
+2026-09-21 12:18:21 | INFO     |   tvl_hhi              0.0073       -0.729       10.10%      
+2026-09-21 12:18:21 | INFO     |   edge_hhi             0.2457       -0.206       1575.64%    
+2026-09-21 12:18:21 | INFO     |   density              0.0001       0.957        16.83%      
+2026-09-21 12:18:21 | INFO     |   mean_sis             0.0207       0.989        7.13%       
+2026-09-21 12:18:21 | INFO     | 
+Results saved to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_validation_20260921/exp1_forward_risk.json
+2026-09-21 12:18:22 | INFO     | Generating Task II visualization figures...
+2026-09-21 12:18:26 | INFO     | Saved Forward Risk Scatter figure to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_validation_20260921/figures/fig_forward_risk_scatter.pdf
+2026-09-21 12:18:27 | INFO     | Saved Contagion Comparison figure to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_validation_20260921/figures/fig_contagion_comparison.pdf
+2026-09-21 12:18:27 | INFO     | Saved Contagion Advantage figure to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_validation_20260921/figures/fig_contagion_advantage.pdf
+2026-09-21 12:18:27 | INFO     | All figures saved to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_validation_20260921/figures
+COMPLETE /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_validation_20260921/comparison.json

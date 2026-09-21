@@ -17,6 +17,28 @@ Crucially, it supports **two modes**:
 - Large network files can be heavy to load. `run_full_experiment.py` uses `ijson` for
   streaming JSON parsing to reduce memory usage.
 
+## INTERNAL NOTES | Contagion loss cap
+
+Received contagion losses are capped at `max(0, TVL)` for every creditor,
+including nodes with exactly zero TVL. Zero-TVL nodes remain in the graph and
+in exposure-share denominators, but cannot accumulate or propagate losses.
+Loss removed by the cap is not redistributed. Existing missing-to-zero input
+handling is unchanged; this does not establish that missing TVL is economically
+zero.
+
+Earlier simulator versions applied the cap only when TVL was positive. That
+made zero and arbitrarily small positive TVL produce discontinuous aggregate
+losses. After this correction, recompute observed, predicted, and realized
+graphs with the same rule, including baseline errors and the worst-20% subset.
+Do not combine corrected predictions with old baseline or realized losses, or
+label corrected results as an exact reproduction of the printed paper table.
+
+The boundary regression check covers all three simulator entry points:
+
+```
+uv run --no-project --with numpy python paper/tests/test_contagion_zero_tvl.py
+```
+
 
 ## Observed mode
 

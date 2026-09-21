@@ -1,0 +1,22 @@
+{
+  "h1": {
+    "baseline_mae": 1.123266371172439,
+    "original_mae": 6.79979741440146,
+    "keep_current_zero_mae": 1.3611334949497185
+  },
+  "h4": {
+    "baseline_mae": 0.9376518457359837,
+    "original_mae": 6.898853664468487,
+    "keep_current_zero_mae": 1.651629670559109
+  },
+  "h8": {
+    "baseline_mae": 1.6552639316571205,
+    "original_mae": 7.188449811327321,
+    "keep_current_zero_mae": 1.3079837322955958
+  },
+  "h12": {
+    "baseline_mae": 1.8180355818857843,
+    "original_mae": 5.498898434026208,
+    "keep_current_zero_mae": 2.5419882045797566
+  }
+}

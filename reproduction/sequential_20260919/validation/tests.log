@@ -1,0 +1,34 @@
+2026-09-21T21:01:37.266510+00:00 TRIAL_START h=1 candidate=baseline epochs=1-40
+2026-09-21T21:01:37.266710+00:00 EPOCH_START h=1 candidate=baseline epoch=1/40
+2026-09-21T21:01:37.310815+00:00 TRIAL h=1 candidate=baseline epoch=1/40 validation=[0.8, 0.8, 1.0, 1.0, 1.0, 1.0] rank=(0.8, 0.8) losses={'total': 0.42801690101623535} seconds=0.0
+2026-09-21T21:01:37.310833+00:00 EPOCH_START h=1 candidate=baseline epoch=2/40
+2026-09-21T21:01:37.312896+00:00 TRIAL h=1 candidate=baseline epoch=2/40 validation=[0.9, 0.9, 1.0, 1.0, 1.0, 1.0] rank=(0.9, 0.9) losses={'total': 0.3786841630935669} seconds=0.0
+2026-09-21T21:01:37.312909+00:00 EPOCH_START h=1 candidate=baseline epoch=3/40
+2026-09-21T21:01:37.314567+00:00 TRIAL h=1 candidate=baseline epoch=3/40 validation=[0.7, 0.7, 1.0, 1.0, 1.0, 1.0] rank=(0.7, 0.7) losses={'total': 0.4571831226348877} seconds=0.0
+2026-09-21T21:01:37.314582+00:00 EPOCH_START h=1 candidate=baseline epoch=4/40
+2026-09-21T21:01:37.316722+00:00 TRIAL h=1 candidate=baseline epoch=4/40 validation=[0.6, 0.6, 1.0, 1.0, 1.0, 1.0] rank=(0.6, 0.6) losses={'total': 0.33442917466163635} seconds=0.0
+2026-09-21T21:01:37.346062+00:00 TRIAL_START h=4 candidate=baseline epochs=1-40
+2026-09-21T21:01:37.346079+00:00 EPOCH_START h=4 candidate=baseline epoch=1/40
+2026-09-21T21:01:37.348363+00:00 TRIAL h=4 candidate=baseline epoch=1/40 validation=[0.8, 0.8, 1.0, 1.0, 1.0, 1.0] rank=(0.8, 0.8) losses={'total': 0.4571831226348877} seconds=0.0
+2026-09-21T21:01:37.348380+00:00 EPOCH_START h=4 candidate=baseline epoch=2/40
+2026-09-21T21:01:37.351462+00:00 TRIAL h=4 candidate=baseline epoch=2/40 validation=[0.9, 0.9, 1.0, 1.0, 1.0, 1.0] rank=(0.9, 0.9) losses={'total': 0.33442917466163635} seconds=0.0
+2026-09-21T21:01:37.351477+00:00 EPOCH_START h=4 candidate=baseline epoch=3/40
+2026-09-21T21:01:37.353015+00:00 TRIAL h=4 candidate=baseline epoch=3/40 validation=[0.7, 0.7, 1.0, 1.0, 1.0, 1.0] rank=(0.7, 0.7) losses={'total': 0.30302509665489197} seconds=0.0
+2026-09-21T21:01:37.353026+00:00 EPOCH_START h=4 candidate=baseline epoch=4/40
+2026-09-21T21:01:37.354537+00:00 TRIAL h=4 candidate=baseline epoch=4/40 validation=[0.6, 0.6, 1.0, 1.0, 1.0, 1.0] rank=(0.6, 0.6) losses={'total': 0.4836086928844452} seconds=0.0
+2026-09-21T21:01:37.384462+00:00 TRIAL_START h=4 candidate=baseline epochs=1-40
+2026-09-21T21:01:37.384480+00:00 EPOCH_START h=4 candidate=baseline epoch=1/40
+2026-09-21T21:01:37.386682+00:00 TRIAL h=4 candidate=baseline epoch=1/40 validation=[0.8, 0.8, 1.0, 1.0, 1.0, 1.0] rank=(0.8, 0.8) losses={'total': 0.4571831226348877} seconds=0.0
+2026-09-21T21:01:37.386695+00:00 EPOCH_START h=4 candidate=baseline epoch=2/40
+2026-09-21T21:01:37.388702+00:00 TRIAL h=4 candidate=baseline epoch=2/40 validation=[0.9, 0.9, 1.0, 1.0, 1.0, 1.0] rank=(0.9, 0.9) losses={'total': 0.33442917466163635} seconds=0.0
+2026-09-21T21:01:37.388713+00:00 EPOCH_START h=4 candidate=baseline epoch=3/40
+2026-09-21T21:01:37.391412+00:00 TRIAL_START h=4 candidate=baseline epochs=3-40
+2026-09-21T21:01:37.391425+00:00 EPOCH_START h=4 candidate=baseline epoch=3/40
+2026-09-21T21:01:37.393180+00:00 TRIAL h=4 candidate=baseline epoch=3/40 validation=[0.7, 0.7, 1.0, 1.0, 1.0, 1.0] rank=(0.7, 0.7) losses={'total': 0.30302509665489197} seconds=0.0
+2026-09-21T21:01:37.393193+00:00 EPOCH_START h=4 candidate=baseline epoch=4/40
+2026-09-21T21:01:37.394872+00:00 TRIAL h=4 candidate=baseline epoch=4/40 validation=[0.6, 0.6, 1.0, 1.0, 1.0, 1.0] rank=(0.6, 0.6) losses={'total': 0.4836086928844452} seconds=0.0
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.679s
+
+OK

@@ -1,0 +1,31 @@
+# Direct Vast.ai API rsync exclusions.
+# Heavy local-only directories -- do not upload to training instances.
+data/
+checkpoints/
+docs/
+icml2026/
+paper-emnlp-industry/
+claw/dist/
+claw/pack/
+
+# Standard junk
+.git/
+.venv/
+.env
+.env.*
+*.pem
+*.key
+__pycache__/
+*.pyc
+*.so
+*.pdf
+build/
+dist/
+*.egg-info/
+tmp/
+cloud/upload/
+logs/
+output/
+outputs/
+paper/results/
+results/

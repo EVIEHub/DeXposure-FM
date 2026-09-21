@@ -1,0 +1,1981 @@
+{
+  "schema_version": 1,
+  "name": "dexposure-cloud",
+  "source": {
+    "hash_algorithm": "sha256-path-content-v1",
+    "paths": [
+      "cloud/preflight.py",
+      "cloud/preflight_manifest.json",
+      "cloud/fm_tune_run.sh",
+      "cloud/fm_tune_plan.json",
+      "cloud/fm_eval_paper_run.sh",
+      "cloud/fm_eval_paper_plan.json",
+      "paper/tests/test_fm_tuning.py",
+      "paper/tests/test_fm_eval_paper.py",
+      "cloud/verify_v2_checkpoint.py",
+      "cloud/recover_emergency_snapshot.py",
+      "cloud/main2025_run.sh",
+      "cloud/main2025_v2_run.sh",
+      "cloud/main2025_v2_checkpoints_run.sh",
+      "cloud/main2025_v2_h12_run.sh",
+      "cloud/main2025_v2_horizon_run.sh",
+      "cloud/main2025_v2_remaining_run.sh",
+      "cloud/fetch_v2_inputs_from_hf.sh",
+      "cloud/pre2022_run.sh",
+      "cloud/llm_pilot_run.sh",
+      "cloud/train.sh",
+      "cloud/vast_api_v2_sequence.sh",
+      "cloud/vast_api_train.sh",
+      "cloud/vast_control_api.py",
+      "cloud/vast_https_bootstrap.sh",
+      "paper/tests/test_vast_https_transport.py",
+      "cloud/vast_api_remote_run.sh",
+      "cloud/vast_api_emergency_snapshot.sh",
+      "cloud/vast_api_watchdog.sh",
+      ".vastignore",
+      "archive/code/**/*.py",
+      "cloud/train_src/**/*.py",
+      "DeXposure_FM_V2/scripts/make_spillover_matrix_figure.py",
+      "paper/dexposure_agent/**/*.py",
+      "paper/experiments/**/*.py",
+      "paper/scripts/**/*.py",
+      "paper/tests/test_cloud_experiment_contracts.py",
+      "paper/tests/test_recover_emergency_snapshot.py",
+      "paper/tests/test_vast_controller_safety.py",
+      "paper/tests/test_vast_sequence_contracts.py",
+      "paper/tests/test_v2_checkpoint_split_contract.py",
+      "paper/tests/test_vast_remaining_batch_contract.py",
+      "paper/tests/test_vast_watchdog_behavior.py",
+      "pyproject.toml",
+      "uv.lock",
+      "cloud/fm_sequential_run.sh",
+      "cloud/fm_sequential_plan.json",
+      "paper/tests/test_fm_sequential.py"
+    ],
+    "optional_paths": [
+      ".python-version"
+    ],
+    "dirty_worktree": "require-source-digest-attestation",
+    "attestation_sha256_env": "PREFLIGHT_SOURCE_ATTESTATION_SHA256",
+    "attestation_path_env": "PREFLIGHT_SOURCE_ATTESTATION",
+    "host_digest_env": "PREFLIGHT_SOURCE_SHA256"
+  },
+  "inputs": {
+    "local": [
+      {
+        "name": "network_data",
+        "path": "data/historical-network_week_2020-03-30.json",
+        "sha256": "aa330bbb8fbf99719fc85d49625d7df7bd68f2b042f5806ded080cec99bad3f8",
+        "size_bytes": 1126067323,
+        "host_path": "data/historical-network_week_2020-03-30.json",
+        "temporal_split": {
+          "algorithm": "sha256-canonical-json-v1",
+          "snapshot_count": 283,
+          "holdout_start": "2025-01-01",
+          "first_date": "2020-03-23",
+          "last_date": "2025-08-18",
+          "counts": {
+            "train": 226,
+            "val": 24,
+            "test": 33
+          },
+          "dates_sha256": "08403569dbae00f707b10f5e8f0c2afbc731a67878934bc6d948c69145bc0ba3"
+        }
+      },
+      {
+        "name": "spillover_data",
+        "path": "data/historical-network_week_2025-07-01.json",
+        "sha256": "d77920a7212847dd3cbfbbaabc8622c25e6523d2e7b2006d79d71b85851e1d0b",
+        "size_bytes": 78805269,
+        "host_path": "data/historical-network_week_2025-07-01.json"
+      },
+      {
+        "name": "metadata",
+        "path": "cloud/upload/data/meta_df.csv",
+        "sha256": "a8306889fc4473972e843d8e847c9db68776cb86014746f1029fee574e254305",
+        "size_bytes": 131025,
+        "host_path": "data/meta_df.csv"
+      },
+      {
+        "name": "base_checkpoint",
+        "path": "cloud/upload/graphpfn-v1.ckpt",
+        "sha256": "5543a25b07b4be523490b7ef14adbb6c7a9ea763d93a4ef7a22584c0cee9a76d",
+        "size_bytes": 14307362,
+        "host_path": "checkpoints/graphpfn-v1.ckpt"
+      }
+    ]
+  },
+  "primary": {
+    "binding": "main2025_h4",
+    "horizons": [
+      4
+    ],
+    "rq": "main2025",
+    "requires_openrouter": false,
+    "allow_independent_m7": false
+  },
+  "bindings": {
+    "main2025_fm_tuning": {
+      "command": "bash cloud/fm_tune_run.sh",
+      "script": "cloud/fm_tune_run.sh",
+      "horizons": [
+        1,
+        4,
+        8,
+        12
+      ],
+      "rq": "new_validation_only_hyperparameter_search",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 20,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "input_fetch": {
+        "command": "bash cloud/fetch_v2_inputs_from_hf.sh",
+        "script": "cloud/fetch_v2_inputs_from_hf.sh",
+        "repo": "losdwind/graph-dexposure-ckpt",
+        "revision": "cd8fcf4264054b58109e8a50c35cd69f6b2ff72a",
+        "files": [
+          {
+            "name": "network_data",
+            "remote_path": "v2_inputs/main2025/historical-network_week_2020-03-30.json",
+            "host_path": "data/historical-network_week_2020-03-30.json",
+            "size_bytes": 1126067323,
+            "sha256": "aa330bbb8fbf99719fc85d49625d7df7bd68f2b042f5806ded080cec99bad3f8"
+          },
+          {
+            "name": "spillover_data",
+            "remote_path": "v2_inputs/main2025/historical-network_week_2025-07-01.json",
+            "host_path": "data/historical-network_week_2025-07-01.json",
+            "size_bytes": 78805269,
+            "sha256": "d77920a7212847dd3cbfbbaabc8622c25e6523d2e7b2006d79d71b85851e1d0b"
+          },
+          {
+            "name": "metadata",
+            "remote_path": "v2_inputs/main2025/meta_df.csv",
+            "host_path": "data/meta_df.csv",
+            "size_bytes": 131025,
+            "sha256": "a8306889fc4473972e843d8e847c9db68776cb86014746f1029fee574e254305"
+          },
+          {
+            "name": "base_checkpoint",
+            "remote_path": "v2_inputs/main2025/graphpfn-v1.ckpt",
+            "host_path": "checkpoints/graphpfn-v1.ckpt",
+            "size_bytes": 14307362,
+            "sha256": "5543a25b07b4be523490b7ef14adbb6c7a9ea763d93a4ef7a22584c0cee9a76d"
+          }
+        ]
+      },
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_hremaining_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/all_results.json",
+          "checkpoints/main2025_v2_hremaining/feature_schema.json",
+          "checkpoints/main2025_v2_hremaining/task1_metrics.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h4.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h8.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h12.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h1.json",
+          "checkpoints/main2025_v2_hremaining_train/plan.json",
+          "checkpoints/main2025_v2_hremaining_train/baseline_gate.json",
+          "checkpoints/main2025_v2_hremaining_train/baseline_validation.json",
+          "checkpoints/main2025_v2_hremaining_train/selection_frozen.json",
+          "checkpoints/main2025_v2_hremaining_train/result.json",
+          "checkpoints/main2025_v2_hremaining_train/pair_hashes.json",
+          "checkpoints/main2025_v2_hremaining_train/split.json"
+        ],
+        "minimum_count": 18
+      }
+    },
+    "main2025_fm_eval_paper": {
+      "command": "bash cloud/fm_eval_paper_run.sh",
+      "script": "cloud/fm_eval_paper_run.sh",
+      "horizons": [
+        1,
+        4,
+        8,
+        12
+      ],
+      "rq": "paper_release_2025_holdout_eval",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 0,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "input_fetch": {
+        "command": "bash cloud/fetch_v2_inputs_from_hf.sh",
+        "script": "cloud/fetch_v2_inputs_from_hf.sh",
+        "repo": "losdwind/graph-dexposure-ckpt",
+        "revision": "cd8fcf4264054b58109e8a50c35cd69f6b2ff72a",
+        "files": [
+          {
+            "name": "network_data",
+            "remote_path": "v2_inputs/main2025/historical-network_week_2020-03-30.json",
+            "host_path": "data/historical-network_week_2020-03-30.json",
+            "size_bytes": 1126067323,
+            "sha256": "aa330bbb8fbf99719fc85d49625d7df7bd68f2b042f5806ded080cec99bad3f8"
+          },
+          {
+            "name": "spillover_data",
+            "remote_path": "v2_inputs/main2025/historical-network_week_2025-07-01.json",
+            "host_path": "data/historical-network_week_2025-07-01.json",
+            "size_bytes": 78805269,
+            "sha256": "d77920a7212847dd3cbfbbaabc8622c25e6523d2e7b2006d79d71b85851e1d0b"
+          },
+          {
+            "name": "metadata",
+            "remote_path": "v2_inputs/main2025/meta_df.csv",
+            "host_path": "data/meta_df.csv",
+            "size_bytes": 131025,
+            "sha256": "a8306889fc4473972e843d8e847c9db68776cb86014746f1029fee574e254305"
+          },
+          {
+            "name": "base_checkpoint",
+            "remote_path": "v2_inputs/main2025/graphpfn-v1.ckpt",
+            "host_path": "checkpoints/graphpfn-v1.ckpt",
+            "size_bytes": 14307362,
+            "sha256": "5543a25b07b4be523490b7ef14adbb6c7a9ea763d93a4ef7a22584c0cee9a76d"
+          }
+        ]
+      },
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_hremaining_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/all_results.json",
+          "checkpoints/main2025_v2_hremaining/feature_schema.json",
+          "checkpoints/main2025_v2_hremaining/task1_metrics.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h1.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h4.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h8.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h12.json",
+          "checkpoints/main2025_v2_hremaining_train/plan.json",
+          "checkpoints/main2025_v2_hremaining_train/result.json",
+          "checkpoints/main2025_v2_hremaining_train/comparison.json",
+          "checkpoints/main2025_v2_hremaining_train/pair_hashes.json",
+          "checkpoints/main2025_v2_hremaining_train/split.json"
+        ],
+        "minimum_count": 16
+      }
+    },
+    "main2025_h4": {
+      "command": "bash cloud/main2025_run.sh",
+      "script": "cloud/main2025_run.sh",
+      "horizons": [
+        4
+      ],
+      "rq": "main2025",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 20,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_train/finetuned/data_quality.json",
+          "checkpoints/main2025_train/finetuned/metrics.json",
+          "checkpoints/main2025_train/finetuned/all_results.json"
+        ],
+        "minimum_count": 5
+      }
+    },
+    "main2025_v2_all_horizons": {
+      "command": "bash cloud/main2025_v2_run.sh",
+      "script": "cloud/main2025_v2_run.sh",
+      "enabled": false,
+      "disabled_reason": "replaced by the one-instance-per-horizon Vast API sequence so completed checkpoints are recovered before later work starts",
+      "horizons": [
+        1,
+        4,
+        8,
+        12
+      ],
+      "rq": "v2_reconstruction",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 20,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_train/feature_schema.json",
+          "checkpoints/main2025_v2_train/experiment_results.json",
+          "checkpoints/main2025_v2_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_train/frozen/metrics.json",
+          "checkpoints/main2025_v2_train/roland/metrics.json",
+          "checkpoints/main2025_v2_train/all_results.json",
+          "output/task2_model_based_v2/exp1_forward_risk.json",
+          "output/task2_model_based_v2/exp2_predictive_contagion.json",
+          "output/task2_model_based_v2/exp3_early_warning.json",
+          "output/task2_model_based_v2/all_results.json"
+        ],
+        "minimum_count": 11
+      }
+    },
+    "main2025_v2_h12": {
+      "command": "bash cloud/main2025_v2_h12_run.sh",
+      "script": "cloud/main2025_v2_h12_run.sh",
+      "enabled": false,
+      "disabled_reason": "replaced by cloud/main2025_v2_horizon_run.sh 12 with controller-side recovery verification",
+      "horizons": [
+        12
+      ],
+      "rq": "v2_h12_reconstruction",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 20,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_h12_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/all_results.json"
+        ],
+        "minimum_count": 5
+      }
+    },
+    "main2025_v2_checkpoints": {
+      "command": "bash cloud/main2025_v2_checkpoints_run.sh",
+      "script": "cloud/main2025_v2_checkpoints_run.sh",
+      "enabled": false,
+      "disabled_reason": "monolithic four-horizon training is unsafe on an ephemeral instance; use cloud/vast_api_v2_sequence.sh",
+      "horizons": [
+        1,
+        4,
+        8,
+        12
+      ],
+      "rq": "v2_checkpoint_reconstruction",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 20,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_checkpoints_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_checkpoints_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_checkpoints_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_checkpoints_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_checkpoints_train/finetuned/all_results.json"
+        ],
+        "minimum_count": 5
+      }
+    },
+    "main2025_v2_remaining_checkpoints": {
+      "command": "bash cloud/main2025_v2_remaining_run.sh",
+      "script": "cloud/main2025_v2_remaining_run.sh",
+      "horizons": [
+        4,
+        8,
+        12
+      ],
+      "rq": "v2_checkpoint_reconstruction",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 20,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "input_fetch": {
+        "command": "bash cloud/fetch_v2_inputs_from_hf.sh",
+        "script": "cloud/fetch_v2_inputs_from_hf.sh",
+        "repo": "losdwind/graph-dexposure-ckpt",
+        "revision": "cd8fcf4264054b58109e8a50c35cd69f6b2ff72a",
+        "files": [
+          {
+            "name": "network_data",
+            "remote_path": "v2_inputs/main2025/historical-network_week_2020-03-30.json",
+            "host_path": "data/historical-network_week_2020-03-30.json",
+            "size_bytes": 1126067323,
+            "sha256": "aa330bbb8fbf99719fc85d49625d7df7bd68f2b042f5806ded080cec99bad3f8"
+          },
+          {
+            "name": "spillover_data",
+            "remote_path": "v2_inputs/main2025/historical-network_week_2025-07-01.json",
+            "host_path": "data/historical-network_week_2025-07-01.json",
+            "size_bytes": 78805269,
+            "sha256": "d77920a7212847dd3cbfbbaabc8622c25e6523d2e7b2006d79d71b85851e1d0b"
+          },
+          {
+            "name": "metadata",
+            "remote_path": "v2_inputs/main2025/meta_df.csv",
+            "host_path": "data/meta_df.csv",
+            "size_bytes": 131025,
+            "sha256": "a8306889fc4473972e843d8e847c9db68776cb86014746f1029fee574e254305"
+          },
+          {
+            "name": "base_checkpoint",
+            "remote_path": "v2_inputs/main2025/graphpfn-v1.ckpt",
+            "host_path": "checkpoints/graphpfn-v1.ckpt",
+            "size_bytes": 14307362,
+            "sha256": "5543a25b07b4be523490b7ef14adbb6c7a9ea763d93a4ef7a22584c0cee9a76d"
+          }
+        ]
+      },
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_hremaining_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/all_results.json",
+          "checkpoints/main2025_v2_hremaining/feature_schema.json",
+          "checkpoints/main2025_v2_hremaining/task1_metrics.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h4.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h8.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h12.json"
+        ],
+        "minimum_count": 10
+      }
+    },
+    "main2025_v2_h1_checkpoint": {
+      "command": "bash cloud/main2025_v2_horizon_run.sh 1",
+      "script": "cloud/main2025_v2_horizon_run.sh",
+      "horizons": [
+        1
+      ],
+      "rq": "v2_checkpoint_reconstruction",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 20,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_h1_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_h1_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_h1_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_h1_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_h1_train/finetuned/all_results.json"
+        ],
+        "minimum_count": 5
+      }
+    },
+    "main2025_v2_h4_checkpoint": {
+      "command": "bash cloud/main2025_v2_horizon_run.sh 4",
+      "script": "cloud/main2025_v2_horizon_run.sh",
+      "horizons": [
+        4
+      ],
+      "rq": "v2_checkpoint_reconstruction",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 20,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_h4_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_h4_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_h4_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_h4_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_h4_train/finetuned/all_results.json"
+        ],
+        "minimum_count": 5
+      }
+    },
+    "main2025_v2_h8_checkpoint": {
+      "command": "bash cloud/main2025_v2_horizon_run.sh 8",
+      "script": "cloud/main2025_v2_horizon_run.sh",
+      "horizons": [
+        8
+      ],
+      "rq": "v2_checkpoint_reconstruction",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 20,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_h8_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_h8_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_h8_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_h8_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_h8_train/finetuned/all_results.json"
+        ],
+        "minimum_count": 5
+      }
+    },
+    "main2025_v2_h12_extended": {
+      "command": "bash cloud/main2025_v2_horizon_run.sh 12 --extended",
+      "script": "cloud/main2025_v2_horizon_run.sh",
+      "horizons": [
+        12
+      ],
+      "rq": "h12_extended_training",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 40,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_h12_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/all_results.json"
+        ],
+        "minimum_count": 5
+      },
+      "early_stop_patience": 5
+    },
+    "main2025_v2_h12_checkpoint": {
+      "command": "bash cloud/main2025_v2_horizon_run.sh 12",
+      "script": "cloud/main2025_v2_horizon_run.sh",
+      "horizons": [
+        12
+      ],
+      "rq": "v2_checkpoint_reconstruction",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 20,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_h12_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_h12_train/finetuned/all_results.json"
+        ],
+        "minimum_count": 5
+      }
+    },
+    "pre2022_crisis_h4": {
+      "command": "bash cloud/pre2022_run.sh",
+      "script": "cloud/pre2022_run.sh",
+      "horizons": [
+        4
+      ],
+      "rq": "exploratory_pre2022",
+      "required_inputs": [
+        "local"
+      ],
+      "requires_pi_min": true,
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "json_contract": {
+        "required_files": [
+          "checkpoints/pre2022_train/finetuned/feature_schema.json",
+          "checkpoints/pre2022_train/finetuned/experiment_results.json",
+          "checkpoints/pre2022_train/finetuned/data_quality.json",
+          "checkpoints/pre2022_train/finetuned/metrics.json",
+          "checkpoints/pre2022_train/finetuned/all_results.json",
+          "logs/crisis_backtest/b1_crisis.json",
+          "logs/crisis_backtest/b5_crisis.json",
+          "logs/crisis_backtest/prompts_m6_fm_llm_2022-04__2022-07.json",
+          "logs/crisis_backtest/prompts_m6_fm_llm_2022-10__2023-01.json",
+          "logs/crisis_backtest/prompts_m6_fm_llm_2023-01__2023-05.json"
+        ],
+        "minimum_count": 10
+      }
+    },
+    "pre2022_rq1": {
+      "command": "bash cloud/pre2022_run.sh --rq1-all-horizons",
+      "script": "cloud/pre2022_run.sh",
+      "horizons": [
+        1,
+        4,
+        8,
+        12
+      ],
+      "rq": "RQ1",
+      "required_inputs": [
+        "local"
+      ],
+      "requires_pi_min": true,
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "requires_env": "PREFLIGHT_RQ1",
+      "json_contract": {
+        "required_files": [
+          "checkpoints/pre2022_train/finetuned/feature_schema.json",
+          "checkpoints/pre2022_train/finetuned/experiment_results.json",
+          "checkpoints/pre2022_train/finetuned/data_quality.json",
+          "checkpoints/pre2022_train/finetuned/metrics.json",
+          "checkpoints/pre2022_train/finetuned/all_results.json",
+          "logs/crisis_backtest/b1_crisis.json",
+          "logs/crisis_backtest/b5_crisis.json",
+          "logs/crisis_backtest/prompts_m6_fm_llm_2022-04__2022-07.json",
+          "logs/crisis_backtest/prompts_m6_fm_llm_2022-10__2023-01.json",
+          "logs/crisis_backtest/prompts_m6_fm_llm_2023-01__2023-05.json"
+        ],
+        "minimum_count": 10
+      }
+    },
+    "llm_pilot": {
+      "command": "bash cloud/llm_pilot_run.sh",
+      "script": "cloud/llm_pilot_run.sh",
+      "enabled": false,
+      "disabled_reason": "fixed REMOTE_RUN 20260805_225404 is a legacy checkpoint without provenance; replace with a provenance-complete pre2022 run and SHA before enabling",
+      "horizons": [
+        4
+      ],
+      "rq": "pilot",
+      "required_inputs": [
+        "local"
+      ],
+      "requires_pi_min": true,
+      "requires_openrouter": true,
+      "allow_independent_m7": false
+    },
+    "main2025_v2_repeat20": {
+      "command": "bash cloud/main2025_v2_remaining_run.sh --all",
+      "script": "cloud/main2025_v2_remaining_run.sh",
+      "horizons": [
+        1,
+        4,
+        8,
+        12
+      ],
+      "rq": "four_horizon_20_epoch_repeat",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 20,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "input_fetch": {
+        "command": "bash cloud/fetch_v2_inputs_from_hf.sh",
+        "script": "cloud/fetch_v2_inputs_from_hf.sh",
+        "repo": "losdwind/graph-dexposure-ckpt",
+        "revision": "cd8fcf4264054b58109e8a50c35cd69f6b2ff72a",
+        "files": [
+          {
+            "name": "network_data",
+            "remote_path": "v2_inputs/main2025/historical-network_week_2020-03-30.json",
+            "host_path": "data/historical-network_week_2020-03-30.json",
+            "size_bytes": 1126067323,
+            "sha256": "aa330bbb8fbf99719fc85d49625d7df7bd68f2b042f5806ded080cec99bad3f8"
+          },
+          {
+            "name": "spillover_data",
+            "remote_path": "v2_inputs/main2025/historical-network_week_2025-07-01.json",
+            "host_path": "data/historical-network_week_2025-07-01.json",
+            "size_bytes": 78805269,
+            "sha256": "d77920a7212847dd3cbfbbaabc8622c25e6523d2e7b2006d79d71b85851e1d0b"
+          },
+          {
+            "name": "metadata",
+            "remote_path": "v2_inputs/main2025/meta_df.csv",
+            "host_path": "data/meta_df.csv",
+            "size_bytes": 131025,
+            "sha256": "a8306889fc4473972e843d8e847c9db68776cb86014746f1029fee574e254305"
+          },
+          {
+            "name": "base_checkpoint",
+            "remote_path": "v2_inputs/main2025/graphpfn-v1.ckpt",
+            "host_path": "checkpoints/graphpfn-v1.ckpt",
+            "size_bytes": 14307362,
+            "sha256": "5543a25b07b4be523490b7ef14adbb6c7a9ea763d93a4ef7a22584c0cee9a76d"
+          }
+        ]
+      },
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_hremaining_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/all_results.json",
+          "checkpoints/main2025_v2_hremaining/feature_schema.json",
+          "checkpoints/main2025_v2_hremaining/task1_metrics.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h4.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h8.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h12.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h1.json"
+        ],
+        "minimum_count": 11
+      }
+    },
+    "main2025_fm_sequential": {
+      "command": "bash cloud/fm_sequential_run.sh",
+      "script": "cloud/fm_sequential_run.sh",
+      "horizons": [
+        1,
+        4,
+        8,
+        12
+      ],
+      "rq": "new_sequential_horizon_training",
+      "holdout_start": "2025-01-01",
+      "val_weeks": 24,
+      "epochs": 40,
+      "seed": 42,
+      "required_inputs": [
+        "local"
+      ],
+      "requires_openrouter": false,
+      "allow_independent_m7": false,
+      "input_fetch": {
+        "command": "bash cloud/fetch_v2_inputs_from_hf.sh",
+        "script": "cloud/fetch_v2_inputs_from_hf.sh",
+        "repo": "losdwind/graph-dexposure-ckpt",
+        "revision": "cd8fcf4264054b58109e8a50c35cd69f6b2ff72a",
+        "files": [
+          {
+            "name": "network_data",
+            "remote_path": "v2_inputs/main2025/historical-network_week_2020-03-30.json",
+            "host_path": "data/historical-network_week_2020-03-30.json",
+            "size_bytes": 1126067323,
+            "sha256": "aa330bbb8fbf99719fc85d49625d7df7bd68f2b042f5806ded080cec99bad3f8"
+          },
+          {
+            "name": "spillover_data",
+            "remote_path": "v2_inputs/main2025/historical-network_week_2025-07-01.json",
+            "host_path": "data/historical-network_week_2025-07-01.json",
+            "size_bytes": 78805269,
+            "sha256": "d77920a7212847dd3cbfbbaabc8622c25e6523d2e7b2006d79d71b85851e1d0b"
+          },
+          {
+            "name": "metadata",
+            "remote_path": "v2_inputs/main2025/meta_df.csv",
+            "host_path": "data/meta_df.csv",
+            "size_bytes": 131025,
+            "sha256": "a8306889fc4473972e843d8e847c9db68776cb86014746f1029fee574e254305"
+          },
+          {
+            "name": "base_checkpoint",
+            "remote_path": "v2_inputs/main2025/graphpfn-v1.ckpt",
+            "host_path": "checkpoints/graphpfn-v1.ckpt",
+            "size_bytes": 14307362,
+            "sha256": "5543a25b07b4be523490b7ef14adbb6c7a9ea763d93a4ef7a22584c0cee9a76d"
+          }
+        ]
+      },
+      "json_contract": {
+        "required_files": [
+          "checkpoints/main2025_v2_hremaining_train/finetuned/feature_schema.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/experiment_results.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/data_quality.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/metrics.json",
+          "checkpoints/main2025_v2_hremaining_train/finetuned/all_results.json",
+          "checkpoints/main2025_v2_hremaining/feature_schema.json",
+          "checkpoints/main2025_v2_hremaining/task1_metrics.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h4.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h8.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h12.json",
+          "checkpoints/main2025_v2_hremaining/run_config_h1.json",
+          "checkpoints/main2025_v2_hremaining_train/plan.json",
+          "checkpoints/main2025_v2_hremaining_train/selection_frozen.json",
+          "checkpoints/main2025_v2_hremaining_train/result.json",
+          "checkpoints/main2025_v2_hremaining_train/pair_hashes.json",
+          "checkpoints/main2025_v2_hremaining_train/split.json"
+        ],
+        "minimum_count": 16
+      }
+    }
+  },
+  "outputs": {
+    "main2025_fm_tuning": [
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/task1_metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h4.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h8.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h12.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/all_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h1.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/trials",
+        "kind": "directory"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/predictions",
+        "kind": "directory"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/tuning_manifest.sha256",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/source.tar.gz",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/plan.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/baseline_gate.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/baseline_validation.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/selection_frozen.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/result.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/pair_hashes.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/split.json",
+        "kind": "file"
+      }
+    ],
+    "main2025_fm_eval_paper": [
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/task1_metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h1.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h4.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h8.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h12.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/all_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/plan.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/result.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/comparison.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/pair_hashes.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/split.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/eval_manifest.sha256",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/source.tar.gz",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/predictions",
+        "kind": "directory"
+      }
+    ],
+    "main2025_h4": [
+      {
+        "path": "checkpoints/main2025/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_train/finetuned/best_model_h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_train/finetuned/all_results.json",
+        "kind": "file"
+      }
+    ],
+    "main2025_v2_all_horizons": [
+      {
+        "path": "checkpoints/main2025_v2/dexposure-fm-h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2/dexposure-fm-h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2/dexposure-fm-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_train/finetuned/best_model_h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_train/finetuned/best_model_h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_train/finetuned/best_model_h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_train/finetuned/best_model_h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_train/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_train/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_train/frozen/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_train/roland/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_train/all_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "output/task2_model_based_v2/exp1_forward_risk.json",
+        "kind": "file"
+      },
+      {
+        "path": "output/task2_model_based_v2/exp2_predictive_contagion.json",
+        "kind": "file"
+      },
+      {
+        "path": "output/task2_model_based_v2/exp3_early_warning.json",
+        "kind": "file"
+      },
+      {
+        "path": "output/task2_model_based_v2/all_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "output/task2_model_based_v2/figures/fig_forward_risk_scatter.pdf",
+        "kind": "file"
+      },
+      {
+        "path": "output/task2_model_based_v2/figures/fig_contagion_comparison.pdf",
+        "kind": "file"
+      },
+      {
+        "path": "output/task2_model_based_v2/figures/fig_contagion_advantage.pdf",
+        "kind": "file"
+      },
+      {
+        "path": "output/task2_model_based_v2/figures/fig_early_warning.pdf",
+        "kind": "file"
+      },
+      {
+        "path": "output/task2_model_based_v2/figures/fig_spillover_matrix_example.pdf",
+        "kind": "file"
+      },
+      {
+        "path": "output/task2_model_based_v2/SHA256SUMS",
+        "kind": "file"
+      }
+    ],
+    "main2025_v2_h12": [
+      {
+        "path": "checkpoints/main2025_v2_h12/dexposure-fm-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/best_model_h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/all_results.json",
+        "kind": "file"
+      }
+    ],
+    "main2025_v2_checkpoints": [
+      {
+        "path": "checkpoints/main2025_v2_rerun/dexposure-fm-h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_rerun/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_rerun/dexposure-fm-h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_rerun/dexposure-fm-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_rerun/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_rerun/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_checkpoints_train/finetuned/best_model_h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_checkpoints_train/finetuned/best_model_h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_checkpoints_train/finetuned/best_model_h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_checkpoints_train/finetuned/best_model_h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_checkpoints_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_checkpoints_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_checkpoints_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_checkpoints_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_checkpoints_train/finetuned/all_results.json",
+        "kind": "file"
+      }
+    ],
+    "main2025_v2_remaining_checkpoints": [
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/task1_metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h4.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h8.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h12.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/all_results.json",
+        "kind": "file"
+      }
+    ],
+    "main2025_v2_h1_checkpoint": [
+      {
+        "path": "checkpoints/main2025_v2_h1/dexposure-fm-h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h1/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h1/task1_metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h1/run_config.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h1/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h1_train/finetuned/best_model_h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h1_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h1_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h1_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h1_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h1_train/finetuned/all_results.json",
+        "kind": "file"
+      }
+    ],
+    "main2025_v2_h4_checkpoint": [
+      {
+        "path": "checkpoints/main2025_v2_h4/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h4/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h4/task1_metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h4/run_config.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h4/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h4_train/finetuned/best_model_h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h4_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h4_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h4_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h4_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h4_train/finetuned/all_results.json",
+        "kind": "file"
+      }
+    ],
+    "main2025_v2_h8_checkpoint": [
+      {
+        "path": "checkpoints/main2025_v2_h8/dexposure-fm-h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h8/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h8/task1_metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h8/run_config.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h8/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h8_train/finetuned/best_model_h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h8_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h8_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h8_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h8_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h8_train/finetuned/all_results.json",
+        "kind": "file"
+      }
+    ],
+    "main2025_v2_h12_extended": [
+      {
+        "path": "checkpoints/main2025_v2_h12/dexposure-fm-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12/task1_metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12/run_config.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/best_model_h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/all_results.json",
+        "kind": "file"
+      }
+    ],
+    "main2025_v2_h12_checkpoint": [
+      {
+        "path": "checkpoints/main2025_v2_h12/dexposure-fm-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12/task1_metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12/run_config.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/best_model_h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_h12_train/finetuned/all_results.json",
+        "kind": "file"
+      }
+    ],
+    "pre2022_crisis_h4": [
+      {
+        "path": "checkpoints/pre2022_train/finetuned/best_model_h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/all_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "logs/crisis_backtest/b1_crisis.json",
+        "kind": "file"
+      },
+      {
+        "path": "logs/crisis_backtest/b5_crisis.json",
+        "kind": "file"
+      },
+      {
+        "path": "logs/crisis_backtest/prompts_m6_fm_llm_2022-04__2022-07.json",
+        "kind": "file"
+      },
+      {
+        "path": "logs/crisis_backtest/prompts_m6_fm_llm_2022-10__2023-01.json",
+        "kind": "file"
+      },
+      {
+        "path": "logs/crisis_backtest/prompts_m6_fm_llm_2023-01__2023-05.json",
+        "kind": "file"
+      }
+    ],
+    "pre2022_rq1": [
+      {
+        "path": "checkpoints/pre2022_train/finetuned/best_model_h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/best_model_h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/best_model_h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/best_model_h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022_train/finetuned/all_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022/dexposure-fm-h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022/dexposure-fm-h8-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022/dexposure-fm-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pre2022/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "logs/crisis_backtest/b1_crisis.json",
+        "kind": "file"
+      },
+      {
+        "path": "logs/crisis_backtest/b5_crisis.json",
+        "kind": "file"
+      },
+      {
+        "path": "logs/crisis_backtest/prompts_m6_fm_llm_2022-04__2022-07.json",
+        "kind": "file"
+      },
+      {
+        "path": "logs/crisis_backtest/prompts_m6_fm_llm_2022-10__2023-01.json",
+        "kind": "file"
+      },
+      {
+        "path": "logs/crisis_backtest/prompts_m6_fm_llm_2023-01__2023-05.json",
+        "kind": "file"
+      }
+    ],
+    "llm_pilot": [
+      {
+        "path": "checkpoints/pilot_pre2022/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/pilot_pre2022/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "logs/llm_pilot",
+        "kind": "directory"
+      }
+    ],
+    "main2025_v2_repeat20": [
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/task1_metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h4.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h8.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h12.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/all_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h1.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h1.pt",
+        "kind": "file"
+      }
+    ],
+    "main2025_fm_sequential": [
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/task1_metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h4.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h8.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h12.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/SHA256SUMS",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h4.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h8.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h12.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/feature_schema.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/experiment_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/data_quality.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/metrics.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/all_results.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/dexposure-fm-h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining/run_config_h1.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/finetuned/best_model_h1.pt",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/trials",
+        "kind": "directory"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/predictions",
+        "kind": "directory"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/tuning_manifest.sha256",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/source.tar.gz",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/plan.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/selection_frozen.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/result.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/pair_hashes.json",
+        "kind": "file"
+      },
+      {
+        "path": "checkpoints/main2025_v2_hremaining_train/split.json",
+        "kind": "file"
+      }
+    ]
+  },
+  "artifact_upload": {
+    "required": true,
+    "paths": [
+      "checkpoints",
+      "logs",
+      "output"
+    ],
+    "destination": "losdwind/graph-dexposure-ckpt",
+    "manifest_name": "preflight_output_manifest.json"
+  },
+  "verifiers": {
+    "evidence": "scripts.replay_coverage_intervention_frontier:evidence_hash",
+    "candidate": "scripts.replay_coverage_intervention_frontier:validate_decision_output",
+    "gate": "scripts.replay_coverage_intervention_frontier:apply_action_gate"
+  }
+}

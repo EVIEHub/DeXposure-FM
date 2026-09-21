@@ -1,0 +1,56 @@
+Downloading networkx (2.0MiB)
+Downloading scipy (19.5MiB)
+Downloading matplotlib (8.9MiB)
+Downloading fonttools (3.0MiB)
+Downloading scikit-learn (7.9MiB)
+ Downloaded networkx
+ Downloaded fonttools
+ Downloaded scikit-learn
+ Downloaded matplotlib
+ Downloaded scipy
+Installed 19 packages in 88ms
+SELF_CHECK passed: masks, edge log conversion, isolated shock
+INPUT_HASHES passed
+DATA loaded 39 snapshots
+PAIRS cross-checked 1 32
+TASK_I_MATCH 1
+PAIRS cross-checked 4 29
+TASK_I_MATCH 4
+PAIRS cross-checked 8 25
+TASK_I_MATCH 8
+PAIRS cross-checked 12 21
+TASK_I_MATCH 12
+2026-09-21 22:01:40 | INFO     | 
+======================================================================
+2026-09-21 22:01:40 | INFO     | EXPERIMENT 2: Predictive Contagion Simulation
+2026-09-21 22:01:40 | INFO     | ======================================================================
+2026-09-21 22:01:40 | INFO     | Goal: Show model enables forward-looking stress testing
+2026-09-21 22:01:40 | INFO     | 
+--- Horizon h=1 weeks ---
+PAIRS cross-checked 1 32
+2026-09-21 22:01:59 | INFO     |   Top Protocol Shock: MAE=0.45%, Corr=0.539
+2026-09-21 22:01:59 | INFO     |   Top 5 Protocols Shock: MAE=0.78%, Corr=0.012
+2026-09-21 22:01:59 | INFO     |   Bridge Sector Shock: MAE=0.17%, Corr=0.645
+2026-09-21 22:01:59 | INFO     | 
+--- Horizon h=4 weeks ---
+PAIRS cross-checked 4 29
+2026-09-21 22:02:17 | INFO     |   Top Protocol Shock: MAE=0.61%, Corr=0.190
+2026-09-21 22:02:17 | INFO     |   Top 5 Protocols Shock: MAE=0.62%, Corr=0.466
+2026-09-21 22:02:17 | INFO     |   Bridge Sector Shock: MAE=0.37%, Corr=-0.134
+2026-09-21 22:02:17 | INFO     | 
+--- Horizon h=8 weeks ---
+PAIRS cross-checked 8 25
+2026-09-21 22:02:31 | INFO     |   Top Protocol Shock: MAE=0.81%, Corr=-0.346
+2026-09-21 22:02:31 | INFO     |   Top 5 Protocols Shock: MAE=0.74%, Corr=0.325
+2026-09-21 22:02:31 | INFO     |   Bridge Sector Shock: MAE=0.33%, Corr=0.009
+2026-09-21 22:02:31 | INFO     | 
+--- Horizon h=12 weeks ---
+PAIRS cross-checked 12 21
+2026-09-21 22:02:43 | INFO     |   Top Protocol Shock: MAE=1.10%, Corr=-0.558
+2026-09-21 22:02:43 | INFO     |   Top 5 Protocols Shock: MAE=0.72%, Corr=0.069
+2026-09-21 22:02:43 | INFO     |   Bridge Sector Shock: MAE=0.40%, Corr=0.030
+2026-09-21 22:02:43 | INFO     | 
+Results saved to /private/tmp/dexposure-public-replay-20260919/exp2_predictive_contagion.json
+2026-09-21 22:02:47 | INFO     | Saved Contagion Comparison figure to /private/tmp/dexposure-public-replay-20260919/figures/fig_contagion_comparison.pdf
+2026-09-21 22:02:48 | INFO     | Saved Contagion Advantage figure to /private/tmp/dexposure-public-replay-20260919/figures/fig_contagion_advantage.pdf
+PASS: 24 Task I metrics and corrected Table 4 reproduced; Figures 2-3 exported.

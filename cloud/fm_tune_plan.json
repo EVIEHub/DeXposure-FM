@@ -1,0 +1,45 @@
+{
+  "experiment_kind": "new_hyperparameter_search_not_original_v2",
+  "horizons": [1, 4, 8, 12],
+  "seed": 42,
+  "holdout_start": "2025-01-01",
+  "validation_weeks": 24,
+  "screen_epochs": 6,
+  "epochs": 20,
+  "neg_ratio": 5,
+  "rank_mode": "paper_surplus",
+  "selection": "validation only; maximize count of six metrics beating paper printed beyond 0.0005, then the weakest signed surplus, then AUPRC surplus",
+  "classification_errors": ["1-auprc", "1-auroc"],
+  "baseline_policy": "validation_reference_only",
+  "test_policy": "no historical test replay gate; freeze all four winners before test evaluation",
+  "max_train_seconds": 86400,
+  "max_offer_dph": 0.81,
+  "max_gpu_memory_mib": 49152,
+  "core_sha256": "d2e47cb6ce33aff1d8c1ecba0de3494f84c3596ee1cefb45e9e29825b2be4a0e",
+  "baseline_repo": "losdwind/graph-dexposure-ckpt",
+  "baseline_revision": "391020f9d529df1b528b163f67d27a66c10fe388",
+  "baseline_prefix": "runs/20260906_four_horizons_repeat20/checkpoints/main2025_v2_hremaining",
+  "baseline_source_sha256": "f167b067a2103e81e778470e2c9e008ee127c015cfb374da1b98127315ced9e5",
+  "baseline_sha256": {
+    "1": "00dea2eeb6e17522c5c18416096fa47768255e9e50dc5742976427bcc45c9936",
+    "4": "9318f1c134da24472abd07bc62c66cd1100969023185fe22f9757f26ccf3e11c",
+    "8": "c4758bf522d9f5555efaba5e43e4168940a8e78b411ce3ee68a3a44bcc52e355",
+    "12": "804334b8e43827e98930e1688edc6c77d191c690dea51cef72e80ac00bf7c298"
+  },
+  "agreement_atol": 0.00001,
+  "regression_agreement_atol": 0.0001,
+  "agreement_rtol": 0.00001,
+  "candidates": [
+    {"name": "baseline", "lr": 0.0005, "encoder_lr": 0.00005, "exist_loss_weight": 2.0, "weight_loss_weight": 0.5, "node_loss_weight": 20.0},
+    {"name": "exist_weight_4", "lr": 0.0005, "encoder_lr": 0.00005, "exist_loss_weight": 4.0, "weight_loss_weight": 0.5, "node_loss_weight": 20.0},
+    {"name": "exist_weight_6", "lr": 0.0005, "encoder_lr": 0.00005, "exist_loss_weight": 6.0, "weight_loss_weight": 0.5, "node_loss_weight": 20.0},
+    {"name": "exist_weight_8", "lr": 0.0005, "encoder_lr": 0.00005, "exist_loss_weight": 8.0, "weight_loss_weight": 0.5, "node_loss_weight": 20.0},
+    {"name": "exist6_slow_enc", "lr": 0.0005, "encoder_lr": 0.000025, "exist_loss_weight": 6.0, "weight_loss_weight": 0.5, "node_loss_weight": 20.0}
+  ],
+  "paper_printed": {
+    "1": [0.972, 0.995, 2.465, 3.388, 0.056, 0.400],
+    "4": [0.973, 0.995, 2.489, 3.424, 0.140, 0.680],
+    "8": [0.967, 0.994, 2.554, 3.509, 0.229, 0.890],
+    "12": [0.967, 0.993, 2.648, 3.606, 0.286, 1.046]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "version": "fm-sequential-20260919-v1",
+  "github_repo": "EVIEHub/DeXposure-FM",
+  "github_branch": "reproduce-sequential-20260919",
+  "hf_repo": "EVIEHub/DeXposure-FM",
+  "hf_revision": "fm-sequential-20260919-v1",
+  "run": "20260919_fm_sequential_h1_h4_h8_h12",
+  "checkpoints": {
+    "h1": {
+      "path": "runs/20260919_fm_sequential_h1_h4_h8_h12/checkpoints/main2025_v2_hremaining/dexposure-fm-h1.pt",
+      "sha256": "d8ff9489eb0a1d68f9a819daec629c94c13740837c68bc039d446a00f7a91e46"
+    },
+    "h4": {
+      "path": "runs/20260919_fm_sequential_h1_h4_h8_h12/checkpoints/main2025_v2_hremaining/dexposure-fm-h4.pt",
+      "sha256": "f9a199e4eceaa1a71e0b33211734309d721fb52674d3b1654da02424b26ec358"
+    },
+    "h8": {
+      "path": "runs/20260919_fm_sequential_h1_h4_h8_h12/checkpoints/main2025_v2_hremaining/dexposure-fm-h8.pt",
+      "sha256": "3c6ffc36e591e0027b4a4fdf57b3d7fd12e9c66c686bbfe350625a444ad08c23"
+    },
+    "h12": {
+      "path": "runs/20260919_fm_sequential_h1_h4_h8_h12/checkpoints/main2025_v2_hremaining/dexposure-fm-h12.pt",
+      "sha256": "869ecc7402c0096fe8e72d4a2a9d78bfce87dd56e92af1094b98c30c94284a37"
+    }
+  }
+}

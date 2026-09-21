@@ -1,0 +1,3 @@
+2026-09-21 20:51:30 | INFO     | Saved Contagion Comparison figure to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_zero_tvl_fixed_20260921/figures/fig_contagion_comparison.pdf
+2026-09-21 20:51:30 | INFO     | Saved Contagion Advantage figure to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_zero_tvl_fixed_20260921/figures/fig_contagion_advantage.pdf
+PASS: all bars fit within shared axis bounds in both figures.

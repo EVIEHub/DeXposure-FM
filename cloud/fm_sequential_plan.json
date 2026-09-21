@@ -1,0 +1,84 @@
+{
+  "seed": 42,
+  "holdout_start": "2025-01-01",
+  "validation_weeks": 24,
+  "neg_ratio": 5,
+  "max_train_seconds": 86400,
+  "max_offer_dph": 0.81,
+  "max_gpu_memory_mib": 49152,
+  "core_sha256": "d2e47cb6ce33aff1d8c1ecba0de3494f84c3596ee1cefb45e9e29825b2be4a0e",
+  "paper_printed": {
+    "1": [
+      0.972,
+      0.995,
+      2.465,
+      3.388,
+      0.056,
+      0.4
+    ],
+    "4": [
+      0.973,
+      0.995,
+      2.489,
+      3.424,
+      0.14,
+      0.68
+    ],
+    "8": [
+      0.967,
+      0.994,
+      2.554,
+      3.509,
+      0.229,
+      0.89
+    ],
+    "12": [
+      0.967,
+      0.993,
+      2.648,
+      3.606,
+      0.286,
+      1.046
+    ]
+  },
+  "experiment_kind": "sequential_horizon_training",
+  "horizons": [
+    1,
+    4,
+    8,
+    12
+  ],
+  "epochs": 40,
+  "early_stop_patience": 5,
+  "rank_mode": "validation_auprc",
+  "test_policy": "Freeze all four stages before test; 2025 benchmark was previously inspected.",
+  "continuation": "Load matched best model, Adam moments, AMP scaler and RNG of prior stage; no optimizer reset.",
+  "selection_evidence": {
+    "1": {
+      "run": "20260906_four_horizons_repeat20",
+      "validation_auprc": 0.9782569965987304
+    },
+    "4": {
+      "run": "20260906_four_horizons_repeat20",
+      "validation_auprc": 0.9722207881537084
+    },
+    "8": {
+      "run": "20260906_four_horizons_repeat20",
+      "validation_auprc": 0.9659506510806309
+    },
+    "12": {
+      "run": "20260905_h12_extended_e40_p5",
+      "epoch": 28,
+      "validation_auprc": 0.9634627824060045
+    }
+  },
+  "selection_limit": "One shared baseline recipe for all horizons, as requested by the user. Supported by the recorded h1/h4 validation results and extended h12 run; not proven to be the globally best shared recipe. The h8-specific existence-weight-4 override is excluded. Prior experiments had unequal training budgets.",
+  "parameters": {
+    "name": "baseline",
+    "lr": 0.0005,
+    "encoder_lr": 5e-05,
+    "exist_loss_weight": 2.0,
+    "weight_loss_weight": 0.5,
+    "node_loss_weight": 20.0
+  }
+}

@@ -1,0 +1,71 @@
+SELF_CHECK passed: masks, edge log conversion, isolated shock
+INPUT_HASHES passed
+DATA loaded 39 snapshots
+OLD_ARTIFACTS_UNCHANGED passed
+2026-09-21 20:47:38 | INFO     | 
+======================================================================
+2026-09-21 20:47:38 | INFO     | EXPERIMENT 2: Predictive Contagion Simulation
+2026-09-21 20:47:38 | INFO     | ======================================================================
+2026-09-21 20:47:38 | INFO     | Goal: Show model enables forward-looking stress testing
+2026-09-21 20:47:38 | INFO     | 
+--- Horizon h=1 weeks ---
+PAIRS cross-checked 1 32
+2026-09-21 20:47:58 | INFO     |   Top Protocol Shock: MAE=0.45%, Corr=0.539
+2026-09-21 20:47:58 | INFO     |   Top 5 Protocols Shock: MAE=0.78%, Corr=0.012
+2026-09-21 20:47:58 | INFO     |   Bridge Sector Shock: MAE=0.17%, Corr=0.645
+2026-09-21 20:47:58 | INFO     | 
+--- Horizon h=4 weeks ---
+PAIRS cross-checked 4 29
+2026-09-21 20:48:16 | INFO     |   Top Protocol Shock: MAE=0.61%, Corr=0.190
+2026-09-21 20:48:16 | INFO     |   Top 5 Protocols Shock: MAE=0.62%, Corr=0.466
+2026-09-21 20:48:16 | INFO     |   Bridge Sector Shock: MAE=0.37%, Corr=-0.134
+2026-09-21 20:48:16 | INFO     | 
+--- Horizon h=8 weeks ---
+PAIRS cross-checked 8 25
+2026-09-21 20:48:31 | INFO     |   Top Protocol Shock: MAE=0.81%, Corr=-0.346
+2026-09-21 20:48:31 | INFO     |   Top 5 Protocols Shock: MAE=0.74%, Corr=0.325
+2026-09-21 20:48:31 | INFO     |   Bridge Sector Shock: MAE=0.33%, Corr=0.009
+2026-09-21 20:48:31 | INFO     | 
+--- Horizon h=12 weeks ---
+PAIRS cross-checked 12 21
+2026-09-21 20:48:44 | INFO     |   Top Protocol Shock: MAE=1.10%, Corr=-0.558
+2026-09-21 20:48:44 | INFO     |   Top 5 Protocols Shock: MAE=0.72%, Corr=0.069
+2026-09-21 20:48:44 | INFO     |   Bridge Sector Shock: MAE=0.40%, Corr=0.030
+2026-09-21 20:48:44 | INFO     | 
+Results saved to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_zero_tvl_fixed_20260921/paper_common_nodes_all/exp2_predictive_contagion.json
+CHECKED paper_common_nodes_all {"h=1": {"n_samples": 96, "worst_frac": 0.2, "worst_k": 20, "mae_model_all": 0.4674687793028364, "mae_baseline_all": 0.3515613521414059, "delta_mae_all": -0.11590742716143054, "win_rate_all": 0.3854166666666667, "mae_model_worst": 0.8267825351651712, "mae_baseline_worst": 1.0002594670759521, "delta_mae_worst": 0.17347693191078095, "win_rate_worst": 0.7, "delta_corr_all": 0.28870591005411966, "delta_sign_acc_all": 0.5729166666666666, "delta_sign_acc_worst": 0.7, "avg_abs_delta_actual_all": 0.3515613521414059, "avg_abs_delta_actual_worst": 1.0002594670759521}, "h=4": {"n_samples": 87, "worst_frac": 0.2, "worst_k": 18, "mae_model_all": 0.5312807159011618, "mae_baseline_all": 0.43731499567129567, "delta_mae_all": -0.0939657202298661, "win_rate_all": 0.3333333333333333, "mae_model_worst": 0.8461085929641589, "mae_baseline_worst": 1.0673463221889417, "delta_mae_worst": 0.2212377292247828, "win_rate_worst": 0.6111111111111112, "delta_corr_all": 0.36627216473143004, "delta_sign_acc_all": 0.5287356321839081, "delta_sign_acc_worst": 0.6666666666666666, "avg_abs_delta_actual_all": 0.43731499567129567, "avg_abs_delta_actual_worst": 1.0673463221889417}, "h=8": {"n_samples": 75, "worst_frac": 0.2, "worst_k": 15, "mae_model_all": 0.6248099611333213, "mae_baseline_all": 0.61175090404261, "delta_mae_all": -0.013059057090711312, "win_rate_all": 0.44, "mae_model_worst": 0.8908348162883696, "mae_baseline_worst": 1.5155185661853272, "delta_mae_worst": 0.6246837498969576, "win_rate_worst": 0.9333333333333333, "delta_corr_all": 0.42231267713536624, "delta_sign_acc_all": 0.5066666666666667, "delta_sign_acc_worst": 0.9333333333333333, "avg_abs_delta_actual_all": 0.61175090404261, "avg_abs_delta_actual_worst": 1.5155185661853272}, "h=12": {"n_samples": 63, "worst_frac": 0.2, "worst_k": 13, "mae_model_all": 0.7372636021078758, "mae_baseline_all": 0.5842340480272048, "delta_mae_all": -0.15302955408067098, "win_rate_all": 0.42857142857142855, "mae_model_worst": 1.4700329288500147, "mae_baseline_worst": 1.4807548955380494, "delta_mae_worst": 0.010721966688034712, "win_rate_worst": 0.7692307692307693, "delta_corr_all": 0.014467426855262176, "delta_sign_acc_all": 0.5555555555555556, "delta_sign_acc_worst": 0.7692307692307693, "avg_abs_delta_actual_all": 0.5842340480272048, "avg_abs_delta_actual_worst": 1.4807548955380494}}
+2026-09-21 20:48:44 | INFO     | Saved Contagion Comparison figure to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_zero_tvl_fixed_20260921/figures/figures/fig_contagion_comparison.pdf
+2026-09-21 20:48:45 | INFO     | Saved Contagion Advantage figure to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_zero_tvl_fixed_20260921/figures/figures/fig_contagion_advantage.pdf
+2026-09-21 20:48:45 | INFO     | 
+======================================================================
+2026-09-21 20:48:45 | INFO     | EXPERIMENT 2: Predictive Contagion Simulation
+2026-09-21 20:48:45 | INFO     | ======================================================================
+2026-09-21 20:48:45 | INFO     | Goal: Show model enables forward-looking stress testing
+2026-09-21 20:48:45 | INFO     | 
+--- Horizon h=1 weeks ---
+PAIRS cross-checked 1 32
+2026-09-21 20:48:52 | INFO     |   Top Protocol Shock: MAE=0.47%, Corr=0.621
+2026-09-21 20:48:52 | INFO     |   Top 5 Protocols Shock: MAE=0.64%, Corr=-0.232
+2026-09-21 20:48:52 | INFO     |   Bridge Sector Shock: MAE=0.08%, Corr=0.938
+2026-09-21 20:48:52 | INFO     | 
+--- Horizon h=4 weeks ---
+PAIRS cross-checked 4 29
+2026-09-21 20:48:58 | INFO     |   Top Protocol Shock: MAE=0.60%, Corr=0.258
+2026-09-21 20:48:58 | INFO     |   Top 5 Protocols Shock: MAE=0.61%, Corr=0.429
+2026-09-21 20:48:58 | INFO     |   Bridge Sector Shock: MAE=0.36%, Corr=-0.025
+2026-09-21 20:48:58 | INFO     | 
+--- Horizon h=8 weeks ---
+PAIRS cross-checked 8 25
+2026-09-21 20:49:05 | INFO     |   Top Protocol Shock: MAE=0.94%, Corr=-0.560
+2026-09-21 20:49:05 | INFO     |   Top 5 Protocols Shock: MAE=0.61%, Corr=0.411
+2026-09-21 20:49:05 | INFO     |   Bridge Sector Shock: MAE=0.38%, Corr=0.088
+2026-09-21 20:49:05 | INFO     | 
+--- Horizon h=12 weeks ---
+PAIRS cross-checked 12 21
+2026-09-21 20:49:11 | INFO     |   Top Protocol Shock: MAE=1.20%, Corr=-0.563
+2026-09-21 20:49:11 | INFO     |   Top 5 Protocols Shock: MAE=0.69%, Corr=-0.346
+2026-09-21 20:49:11 | INFO     |   Bridge Sector Shock: MAE=0.43%, Corr=0.225
+2026-09-21 20:49:11 | INFO     | 
+Results saved to /Users/losdwind/CodeProjects2026/graph-dexposure/outputs/v2_checkpoint_rerun/20260919_fm_sequential_h1_h4_h8_h12/downstream_zero_tvl_fixed_20260921/legacy_default10/exp2_predictive_contagion.json
+CHECKED legacy_default10 {"h=1": {"n_samples": 30, "worst_frac": 0.2, "worst_k": 6, "mae_model_all": 0.3944069554092222, "mae_baseline_all": 0.2998596976895112, "delta_mae_all": -0.09454725771971101, "win_rate_all": 0.4666666666666667, "mae_model_worst": 0.8805479692672854, "mae_baseline_worst": 0.7976857486225487, "delta_mae_worst": -0.0828622206447367, "win_rate_worst": 0.6666666666666666, "delta_corr_all": -0.02839560460764517, "delta_sign_acc_all": 0.6333333333333333, "delta_sign_acc_worst": 0.6666666666666666, "avg_abs_delta_actual_all": 0.2998596976895112, "avg_abs_delta_actual_worst": 0.7976857486225487}, "h=4": {"n_samples": 30, "worst_frac": 0.2, "worst_k": 6, "mae_model_all": 0.5261674208655424, "mae_baseline_all": 0.39477348620154956, "delta_mae_all": -0.1313939346639928, "win_rate_all": 0.4, "mae_model_worst": 0.6998365922984539, "mae_baseline_worst": 0.8196568210139383, "delta_mae_worst": 0.11982022871548448, "win_rate_worst": 0.5, "delta_corr_all": 0.315435078860758, "delta_sign_acc_all": 0.5666666666666667, "delta_sign_acc_worst": 0.5, "avg_abs_delta_actual_all": 0.39477348620154956, "avg_abs_delta_actual_worst": 0.8196568210139383}, "h=8": {"n_samples": 30, "worst_frac": 0.2, "worst_k": 6, "mae_model_all": 0.6419520294383386, "mae_baseline_all": 0.46585108905844613, "delta_mae_all": -0.1761009403798925, "win_rate_all": 0.3333333333333333, "mae_model_worst": 1.0412885586991514, "mae_baseline_worst": 1.0851594698996947, "delta_mae_worst": 0.04387091120054332, "win_rate_worst": 0.6666666666666666, "delta_corr_all": 0.07130170822516778, "delta_sign_acc_all": 0.4666666666666667, "delta_sign_acc_worst": 0.6666666666666666, "avg_abs_delta_actual_all": 0.46585108905844613, "avg_abs_delta_actual_worst": 1.0851594698996947}, "h=12": {"n_samples": 30, "worst_frac": 0.2, "worst_k": 6, "mae_model_all": 0.7746003099477511, "mae_baseline_all": 0.7026839862737895, "delta_mae_all": -0.07191632367396161, "win_rate_all": 0.5333333333333333, "mae_model_worst": 0.9532229508039048, "mae_baseline_worst": 1.6743478604497868, "delta_mae_worst": 0.7211249096458819, "win_rate_worst": 1.0, "delta_corr_all": 0.22216283025564992, "delta_sign_acc_all": 0.7, "delta_sign_acc_worst": 1.0, "avg_abs_delta_actual_all": 0.7026839862737895, "avg_abs_delta_actual_worst": 1.6743478604497868}}
+PASS: both protocols, all three graphs, independent loss/aggregate checks, no oracle substitutions.

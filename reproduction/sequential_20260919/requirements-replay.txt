@@ -1,0 +1,7 @@
+numpy==2.5.3
+scipy==1.18.1
+scikit-learn==1.9.1
+networkx==3.7
+matplotlib==3.11.2
+ijson==3.5.1
+huggingface-hub==1.32.0

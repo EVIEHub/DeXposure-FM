@@ -1,0 +1,203 @@
+diff --git a/archive/code/dexposure_fm/macroprudential_tools.py b/archive/code/dexposure_fm/macroprudential_tools.py
+index c21af56..2f8ca35 100644
+--- a/archive/code/dexposure_fm/macroprudential_tools.py
++++ b/archive/code/dexposure_fm/macroprudential_tools.py
+@@ -283,6 +283,8 @@ def simulate_contagion(
+     """
+     DebtRank-style contagion:
+     interpret edge (creditor -> debtor) as creditor exposure to debtor.
++    Received losses are capped at nonnegative TVL, including exactly zero.
++    Zero-TVL nodes stay in the graph but cannot accumulate or propagate loss.
+     """
+     nodes = snap.get("nodes", {}) or {}
+     edges = snap.get("edges", []) or []
+@@ -345,8 +347,9 @@ def simulate_contagion(
+                 losses[creditor] += propagated
+ 
+                 tvl_c = float(tvl.get(creditor, 0.0))
++                # Apply the same loss cap at zero and at positive TVL.
++                losses[creditor] = min(losses[creditor], max(0.0, tvl_c))
+                 if tvl_c > 0:
+-                    losses[creditor] = min(losses[creditor], tvl_c)
+                     if (
+                         creditor not in distressed
+                         and losses[creditor] > float(distress_threshold) * tvl_c
+diff --git a/archive/code/run_task2_model_based.py b/archive/code/run_task2_model_based.py
+index a28048e..77cf7db 100644
+--- a/archive/code/run_task2_model_based.py
++++ b/archive/code/run_task2_model_based.py
+@@ -417,6 +417,9 @@ def simulate_contagion(
+     """
+     Simulate DebtRank-style contagion from shocked nodes.
+ 
++    Received losses are capped at nonnegative TVL, including exactly zero.
++    Zero-TVL nodes stay in the graph but cannot accumulate or propagate loss.
++
+     Args:
+         snap: Network snapshot with nodes and edges
+         shocked_nodes: List of initially shocked node IDs
+@@ -493,8 +496,9 @@ def simulate_contagion(
+                 losses[creditor] += propagated_loss
+ 
+                 tvl_c = float(tvl.get(creditor, 0.0))
++                # Apply the same loss cap at zero and at positive TVL.
++                losses[creditor] = min(losses[creditor], max(0.0, tvl_c))
+                 if tvl_c > 0:
+-                    losses[creditor] = min(losses[creditor], tvl_c)
+ 
+                     # Check if creditor becomes distressed (only once, when crossing threshold)
+                     if creditor not in distressed and losses[creditor] > distress_threshold * tvl_c:
+@@ -727,7 +731,9 @@ def plot_contagion_comparison(
+     )
+     axes = np.array(axes).reshape(-1).tolist()
+ 
+-    fig.suptitle("Predictive Contagion: Model vs Naive Baseline", fontsize=14, fontweight="bold", y=0.98)
++    note = f"\n{results['evaluation_note']}" if results.get("evaluation_note") else ""
++    fig.suptitle("Predictive Contagion: Model vs Naive Baseline" + note, fontsize=14, fontweight="bold", y=0.98)
++    shared_upper = 0.0
+ 
+     for ax_idx, (horizon_key, horizon_data) in enumerate(horizon_items):
+         ax = axes[ax_idx]
+@@ -806,6 +812,7 @@ def plot_contagion_comparison(
+         upper_vals.extend([m + s for m, s in zip(predicted_means, predicted_stds)])
+         upper_vals.extend([m + s for m, s in zip(actual_means, actual_stds)])
+         y_max = max(upper_vals) if upper_vals else 0.0
++        shared_upper = max(shared_upper, y_max)
+         if y_max > 0:
+             # Extra headroom so the in-axes legend and MAE box don't cover bars.
+             ax.set_ylim(0, y_max * 1.40)
+@@ -824,7 +831,7 @@ def plot_contagion_comparison(
+         ax.text(
+             0.95,
+             0.95,
+-            f"MAE(model): {pred_overall:.2f}%\nMAE(baseline): {base_overall:.2f}%\nΔ: {improvement:+.2f}%",
++            f"MAE(model): {pred_overall:.3f} pp\nMAE(baseline): {base_overall:.3f} pp\nΔ: {improvement:+.3f} pp",
+             transform=ax.transAxes,
+             ha="right",
+             va="top",
+@@ -832,6 +839,9 @@ def plot_contagion_comparison(
+             bbox=dict(boxstyle="round", facecolor="white", alpha=0.8),
+         )
+ 
++    if shared_upper > 0:
++        axes[0].set_ylim(0, shared_upper * 1.40)
++
+     # Hide any unused panels (e.g., if horizons != 4).
+     for extra_ax in axes[len(horizon_items):]:
+         extra_ax.set_visible(False)
+@@ -916,13 +926,15 @@ def plot_contagion_advantage(
+     if worst_frac is None:
+         worst_frac = 0.2
+ 
++    note = f"\n{results['evaluation_note']}" if results.get("evaluation_note") else ""
+     fig.suptitle(
+-        "Predictive Contagion: Where the Model Beats Persistence",
++        "Predictive Contagion: Model Advantage over Persistence" + note,
+         fontsize=14,
+         fontweight="bold",
+         y=0.98,
+     )
+ 
++    shared_extent = 0.0
+     for ax_idx, (horizon_key, horizon_data) in enumerate(horizon_items):
+         ax = axes[ax_idx]
+ 
+@@ -951,7 +963,7 @@ def plot_contagion_advantage(
+             width,
+             color=COLORS["predicted"],
+             alpha=0.85,
+-            label=f"Worst {int(round(100 * worst_frac))}%",
++            label=f"Worst {int(round(100 * worst_frac))}% per scenario",
+         )
+ 
+         ax.set_title(f"Horizon {horizon_key}")
+@@ -965,6 +977,7 @@ def plot_contagion_advantage(
+         vals = vals[~np.isnan(vals)]
+         if vals.size:
+             m = float(np.max(np.abs(vals)))
++            shared_extent = max(shared_extent, m)
+             if m > 0:
+                 ax.set_ylim(-1.25 * m, 1.25 * m)
+ 
+@@ -974,17 +987,20 @@ def plot_contagion_advantage(
+         if overall:
+             ax.text(
+                 0.95,
+-                0.95,
+-                f"Δ(all): {overall.get('delta_mae_all', float('nan')):+.2f}%\n"
+-                f"Δ(worst): {overall.get('delta_mae_worst', float('nan')):+.2f}%\n"
++                0.05,
++                f"Δ(all): {overall.get('delta_mae_all', float('nan')):+.3f} pp\n"
++                f"Δ(worst, pooled): {overall.get('delta_mae_worst', float('nan')):+.3f} pp\n"
+                 f"Win@worst: {100*float(overall.get('win_rate_worst', float('nan'))):.0f}%",
+                 transform=ax.transAxes,
+                 ha="right",
+-                va="top",
++                va="bottom",
+                 fontsize=9,
+                 bbox=dict(boxstyle="round", facecolor="white", alpha=0.8),
+             )
+ 
++    if shared_extent > 0:
++        axes[0].set_ylim(-1.25 * shared_extent, 1.25 * shared_extent)
++
+     # Hide any unused panels (e.g., if horizons != 4).
+     for extra_ax in axes[len(horizon_items):]:
+         extra_ax.set_visible(False)
+diff --git a/cloud/train_src/dexposure_fm/macroprudential_tools.py b/cloud/train_src/dexposure_fm/macroprudential_tools.py
+index 0eec06b..87283c7 100644
+--- a/cloud/train_src/dexposure_fm/macroprudential_tools.py
++++ b/cloud/train_src/dexposure_fm/macroprudential_tools.py
+@@ -283,6 +283,8 @@ def simulate_contagion(
+     """
+     DebtRank-style contagion:
+     interpret edge (creditor -> debtor) as creditor exposure to debtor.
++    Received losses are capped at nonnegative TVL, including exactly zero.
++    Zero-TVL nodes stay in the graph but cannot accumulate or propagate loss.
+     """
+     nodes = snap.get("nodes", {}) or {}
+     edges = snap.get("edges", []) or []
+@@ -345,8 +347,9 @@ def simulate_contagion(
+                 losses[creditor] += propagated
+ 
+                 tvl_c = float(tvl.get(creditor, 0.0))
++                # Apply the same loss cap at zero and at positive TVL.
++                losses[creditor] = min(losses[creditor], max(0.0, tvl_c))
+                 if tvl_c > 0:
+-                    losses[creditor] = min(losses[creditor], tvl_c)
+                     if (
+                         creditor not in distressed
+                         and losses[creditor] > float(distress_threshold) * tvl_c
+diff --git a/docs/macroprudential_tools.md b/docs/macroprudential_tools.md
+index 4f4a212..3ebbe7f 100644
+--- a/docs/macroprudential_tools.md
++++ b/docs/macroprudential_tools.md
+@@ -17,6 +17,28 @@ Crucially, it supports **two modes**:
+ - Large network files can be heavy to load. `run_full_experiment.py` uses `ijson` for
+   streaming JSON parsing to reduce memory usage.
+ 
++## INTERNAL NOTES | Contagion loss cap
++
++Received contagion losses are capped at `max(0, TVL)` for every creditor,
++including nodes with exactly zero TVL. Zero-TVL nodes remain in the graph and
++in exposure-share denominators, but cannot accumulate or propagate losses.
++Loss removed by the cap is not redistributed. Existing missing-to-zero input
++handling is unchanged; this does not establish that missing TVL is economically
++zero.
++
++Earlier simulator versions applied the cap only when TVL was positive. That
++made zero and arbitrarily small positive TVL produce discontinuous aggregate
++losses. After this correction, recompute observed, predicted, and realized
++graphs with the same rule, including baseline errors and the worst-20% subset.
++Do not combine corrected predictions with old baseline or realized losses, or
++label corrected results as an exact reproduction of the printed paper table.
++
++The boundary regression check covers all three simulator entry points:
++
++```
++uv run --no-project --with numpy python paper/tests/test_contagion_zero_tvl.py
++```
++
+ 
+ ## Observed mode
+ 

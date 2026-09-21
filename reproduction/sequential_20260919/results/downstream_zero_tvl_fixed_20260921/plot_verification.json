@@ -1,0 +1,10 @@
+{
+  "bar_bounds_passed": [
+    "figures/fig_contagion_comparison.pdf",
+    "figures/fig_contagion_comparison.png",
+    "figures/fig_contagion_advantage.pdf",
+    "figures/fig_contagion_advantage.png"
+  ],
+  "source_sha256": "565c4e0f4028b752fac76e44baa1e281cf48d5dc5fd7a763d46334f86a52c7c4",
+  "visual_inspection": "Both final PNGs inspected; no bar clipping or label/bar overlap observed."
+}
