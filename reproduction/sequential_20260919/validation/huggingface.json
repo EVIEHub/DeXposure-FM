@@ -1,0 +1,9 @@
+{
+  "repo": "EVIEHub/DeXposure-FM",
+  "branch": "reproduce-sequential-20260919",
+  "tag": "fm-sequential-20260919-v1",
+  "revision": "da1872a7eda92f98ef9ead8ad2bc5d148937e490",
+  "verified_training_files": 153,
+  "download_verified": "predictions/h1/week_000.npz",
+  "checkpoint_hashes_verified": true
+}

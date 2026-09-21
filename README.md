@@ -38,7 +38,7 @@ This repository targets **arXiv:2602.03981v2**, revised 30 June 2026.
   from the paper, and the legacy h8-h12 file contains only one model state.
   Its exact horizon provenance remains unresolved; see the
   [historical audit](docs/V2_HISTORICAL_CHECKPOINT_AUDIT.md).
-- The September four-checkpoint training, artifact upload, local download and
+- The September 5 four-checkpoint training, artifact upload, local download and
   hash verification are complete. These new Task I results have improvements
   and decreases relative to the published values. They do not establish
   reproduction of baseline rows, Task II, or every paper figure.
